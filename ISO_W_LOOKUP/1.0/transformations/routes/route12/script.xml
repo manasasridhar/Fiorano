@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0" xmlns:xalan="http://xml.apache.org/xslt" xmlns:datetime="http://exslt.org/dates-and-times" xmlns:math="http://exslt.org/math" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:lxslt="http://xml.apache.org/xslt" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:java="http://xml.apache.org/xslt/java" xmlns:set="http://exslt.org/sets" exclude-result-prefixes="xalan java lxslt" xmlns:ns2="http://www.w3.org/2001/XMLSchema" xmlns:ns1="http://www.fiorano.com/fesb/activity/ISOMessage" xmlns:dateConversion="dateConversion" xmlns:getFTID="getFTID" xmlns:myext="myext" xmlns:strings="strings" extension-element-prefixes="datetime set math dateConversion getFTID myext strings">
+  <xsl:import href="GLOBAL_FUNCLET_PATH"></xsl:import>
+  <xsl:output method="xml" indent="yes" encoding="UTF-8" xalan:indent-amount="2" omit-xml-declaration="no"></xsl:output>
+  <xsl:variable name="document" select="/"></xsl:variable>
+  <xsl:variable name="document_OUT_PORT" select="document('OUT_PORT')"></xsl:variable>
+  <xsl:template match="/">
+    <Root>
+      <header>
+        <xsl:value-of select="concat('FUNDS.TRANSFER,FT.GEN/I/VALIDATE/2/0,',java:_getStringProperty($_TIF_MESSAGE_, 'username'),'/',java:_getStringProperty($_TIF_MESSAGE_, 'password'),'/',java:_getStringProperty($_TIF_MESSAGE_, 'branch'),',,')"></xsl:value-of>
+      </header>
+      <CREDIT.ACCT.NO>
+        <value>
+          <xsl:variable name="if0">
+            <xsl:choose>
+              <xsl:when test="(ns1:ISOMessage/ns1:Fields/ns1:field_103)!=('')">
+                <xsl:value-of select="ns1:ISOMessage/ns1:Fields/ns1:field_103"></xsl:value-of>
+              </xsl:when>
+              <xsl:otherwise>
+                <xsl:value-of select="ns1:ISOMessage/ns1:Fields/ns1:CreditAccount"></xsl:value-of>
+              </xsl:otherwise>
+            </xsl:choose>
+          </xsl:variable>
+          <xsl:value-of select="$if0"></xsl:value-of>
+        </value>
+      </CREDIT.ACCT.NO>
+      <DEBIT.THEIR.REF>
+        <value>
+          <xsl:value-of select="ns1:ISOMessage/ns1:Fields/ns1:field_37"></xsl:value-of>
+        </value>
+      </DEBIT.THEIR.REF>
+      <DEBIT.ACCT.NO>
+        <value>
+          <xsl:variable name="if1">
+            <xsl:choose>
+              <xsl:when test="(ns1:ISOMessage/ns1:Fields/ns1:field_102)!=('')">
+                <xsl:value-of select="ns1:ISOMessage/ns1:Fields/ns1:field_102"></xsl:value-of>
+              </xsl:when>
+              <xsl:otherwise>
+                <xsl:value-of select="ns1:ISOMessage/ns1:Fields/ns1:DebitAccount"></xsl:value-of>
+              </xsl:otherwise>
+            </xsl:choose>
+          </xsl:variable>
+          <xsl:value-of select="$if1"></xsl:value-of>
+        </value>
+      </DEBIT.ACCT.NO><xsl:if test="((ns1:ISOMessage/ns1:Fields/ns1:TranType)=('00') or (ns1:ISOMessage/ns1:Fields/ns1:TranType)=('01') or  (ns1:ISOMessage/ns1:Fields/ns1:TranType)=('02') or (ns1:ISOMessage/ns1:Fields/ns1:TranType)=('03') or (ns1:ISOMessage/ns1:Fields/ns1:TranType)=('04') or (ns1:ISOMessage/ns1:Fields/ns1:TranType)=('05') or (ns1:ISOMessage/ns1:Fields/ns1:TranType)=('06') or (ns1:ISOMessage/ns1:Fields/ns1:TranType)=('07') or (ns1:ISOMessage/ns1:Fields/ns1:TranType)=('08') or (ns1:ISOMessage/ns1:Fields/ns1:TranType)=('09') or (ns1:ISOMessage/ns1:Fields/ns1:TranType)=('10') or (ns1:ISOMessage/ns1:Fields/ns1:TranType)=('11') or (ns1:ISOMessage/ns1:Fields/ns1:TranType)=('12') or (ns1:ISOMessage/ns1:Fields/ns1:TranType)=('19'))">
+      <DEBIT.AMOUNT>
+        <value>
+          <xsl:value-of select="format-number((number(ns1:ISOMessage/ns1:Fields/ns1:field_4))div('100'),'#.00')"></xsl:value-of>
+        </value>
+      </DEBIT.AMOUNT></xsl:if><xsl:if test="((ns1:ISOMessage/ns1:Fields/ns1:TranType)=('00') or (ns1:ISOMessage/ns1:Fields/ns1:TranType)=('01') or  (ns1:ISOMessage/ns1:Fields/ns1:TranType)=('02') or (ns1:ISOMessage/ns1:Fields/ns1:TranType)=('03') or (ns1:ISOMessage/ns1:Fields/ns1:TranType)=('04') or (ns1:ISOMessage/ns1:Fields/ns1:TranType)=('05') or (ns1:ISOMessage/ns1:Fields/ns1:TranType)=('06') or (ns1:ISOMessage/ns1:Fields/ns1:TranType)=('07') or (ns1:ISOMessage/ns1:Fields/ns1:TranType)=('08') or (ns1:ISOMessage/ns1:Fields/ns1:TranType)=('09') or (ns1:ISOMessage/ns1:Fields/ns1:TranType)=('10') or (ns1:ISOMessage/ns1:Fields/ns1:TranType)=('11') or (ns1:ISOMessage/ns1:Fields/ns1:TranType)=('12') or (ns1:ISOMessage/ns1:Fields/ns1:TranType)=('19'))">
+      <DEBIT.CURRENCY>
+        <value>
+          <xsl:value-of select="ns1:ISOMessage/ns1:Fields/ns1:field_49"></xsl:value-of>
+        </value>
+      </DEBIT.CURRENCY></xsl:if>
+      <PAYMENT.DETAILS>
+        <value>
+          <xsl:value-of select="'Fiorano Test'"></xsl:value-of>
+        </value>
+      </PAYMENT.DETAILS>
+      <CREDIT.THEIR.REF>
+        <value>
+          <xsl:value-of select="ns1:ISOMessage/ns1:Fields/ns1:field_37"></xsl:value-of>
+        </value>
+      </CREDIT.THEIR.REF><xsl:if test="((ns1:ISOMessage/ns1:Fields/ns1:TranType)=('20') or (ns1:ISOMessage/ns1:Fields/ns1:TranType)=('21') or  (ns1:ISOMessage/ns1:Fields/ns1:TranType)=('22') or (ns1:ISOMessage/ns1:Fields/ns1:TranType)=('23') or (ns1:ISOMessage/ns1:Fields/ns1:TranType)=('24') or (ns1:ISOMessage/ns1:Fields/ns1:TranType)=('25') or (ns1:ISOMessage/ns1:Fields/ns1:TranType)=('26') or (ns1:ISOMessage/ns1:Fields/ns1:TranType)=('28') or (ns1:ISOMessage/ns1:Fields/ns1:TranType)=('29'))">
+      <CREDIT.CURRENCY><xsl:value-of select="java:_setStringProperty($_TIF_MESSAGE_, 'CreditTransfer', 'true')"></xsl:value-of>
+        <value>
+          <xsl:value-of select="ns1:ISOMessage/ns1:Fields/ns1:field_49"></xsl:value-of>
+        </value>
+      </CREDIT.CURRENCY></xsl:if>
+      <DEBIT.VALUE.DATE>
+        <value>
+          <xsl:value-of select="'20210324'"></xsl:value-of>
+        </value>
+      </DEBIT.VALUE.DATE>
+      <TRANSACTION.TYPE>
+        <value>
+          <xsl:value-of select="'ACIB'"></xsl:value-of>
+        </value>
+      </TRANSACTION.TYPE><xsl:if test="((ns1:ISOMessage/ns1:Fields/ns1:TranType)=('20') or (ns1:ISOMessage/ns1:Fields/ns1:TranType)=('21') or  (ns1:ISOMessage/ns1:Fields/ns1:TranType)=('22') or (ns1:ISOMessage/ns1:Fields/ns1:TranType)=('23') or (ns1:ISOMessage/ns1:Fields/ns1:TranType)=('24') or (ns1:ISOMessage/ns1:Fields/ns1:TranType)=('25') or (ns1:ISOMessage/ns1:Fields/ns1:TranType)=('26') or (ns1:ISOMessage/ns1:Fields/ns1:TranType)=('28') or (ns1:ISOMessage/ns1:Fields/ns1:TranType)=('29'))">
+      <CREDIT.AMOUNT>
+        <value>
+          <xsl:value-of select="format-number((number(ns1:ISOMessage/ns1:Fields/ns1:field_4))div('100'),'#.00')"></xsl:value-of>
+        </value>
+      </CREDIT.AMOUNT></xsl:if></Root>
+  </xsl:template>
+<!--The list of parameters defined by user-->
+  <xsl:param name="_TIF_MESSAGE_"></xsl:param>
+</xsl:stylesheet>

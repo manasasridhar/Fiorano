@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<target:target xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:target="http://fiorano.com/environment/1.0" xsi:schemaLocation="http://fiorano.com/environment/1.0 env.xsd">
+  <target:instance name="FTPGet1">
+    <target:instance-properties>
+      <target:deployment cache="true" nodes="fps"/>
+    </target:instance-properties>
+    <target:configuration-properties>
+      <target:property encrypt="false" name="FTPGetTargetConfiguration" type="NamedObject">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;yes&quot;?>
+&lt;ns1:namedConfiguration ns1:CLASS_NAME=&quot;com.fiorano.adapter.ftp.model.FTPGetTargetConfiguration&quot; xmlns:ns1=&quot;uri:com.fiorano.adapter.ftp.model&quot;>
+    &lt;ns1:targetDirectory>test&lt;/ns1:targetDirectory>
+    &lt;ns1:useTempTargetDirectory>false&lt;/ns1:useTempTargetDirectory>
+    &lt;ns1:tempTargetDirectory>temp&lt;/ns1:tempTargetDirectory>
+    &lt;ns1:actionIfSameFileExists>OVERWRITE&lt;/ns1:actionIfSameFileExists>
+    &lt;ns1:appendDateTimeFormatPostfix>MMddyyHHmmss&lt;/ns1:appendDateTimeFormatPostfix>
+    &lt;ns1:appendCounter>false&lt;/ns1:appendCounter>
+    &lt;ns1:autoCreateTargetDir>false&lt;/ns1:autoCreateTargetDir>
+&lt;/ns1:namedConfiguration>
+</target:property>
+      <target:property encrypt="false" name="Parent Directory(Local)" type="java.lang.String">D:/</target:property>
+      <target:property encrypt="false" name="FTPConnectionConfiguration" type="NamedObject">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;yes&quot;?>
+&lt;ns1:namedConfiguration ns1:CLASS_NAME=&quot;com.fiorano.adapter.ftp.model.FTPConnectionConfiguration&quot; xmlns:ns1=&quot;uri:com.fiorano.adapter.ftp.model&quot;>
+    &lt;ns1:passwordFromVault>false&lt;/ns1:passwordFromVault>
+    &lt;ns1:customPasswordEncryption>false&lt;/ns1:customPasswordEncryption>
+    &lt;ns1:protocol>FTP&lt;/ns1:protocol>
+    &lt;ns1:host>ftpblr.fiorano.com&lt;/ns1:host>
+    &lt;ns1:port>21&lt;/ns1:port>
+    &lt;ns1:username>ftpblr&lt;/ns1:username>
+    &lt;ns1:password>8wcrvN2UsyEw1fDXVXpVNw==&lt;/ns1:password>
+    &lt;ns1:timeout>0&lt;/ns1:timeout>
+    &lt;ns1:clientAuthenticationType>PASSWORD&lt;/ns1:clientAuthenticationType>
+    &lt;ns1:privateKeyType>DSA&lt;/ns1:privateKeyType>
+    &lt;ns1:privateKeyFile>&lt;/ns1:privateKeyFile>
+    &lt;ns1:privateKeyPassword>&lt;/ns1:privateKeyPassword>
+    &lt;ns1:keyStoreFile>&lt;/ns1:keyStoreFile>
+    &lt;ns1:keyStorePassword>&lt;/ns1:keyStorePassword>
+    &lt;ns1:keyStoreAlias>&lt;/ns1:keyStoreAlias>
+    &lt;ns1:implicitFTPS>false&lt;/ns1:implicitFTPS>
+    &lt;ns1:validateServer>false&lt;/ns1:validateServer>
+    &lt;ns1:verifyHost>true&lt;/ns1:verifyHost>
+&lt;/ns1:namedConfiguration>
+</target:property>
+      <target:property encrypt="false" name="Post Processing Directory" type="java.lang.String">.</target:property>
+    </target:configuration-properties>
+  </target:instance>
+</target:target>

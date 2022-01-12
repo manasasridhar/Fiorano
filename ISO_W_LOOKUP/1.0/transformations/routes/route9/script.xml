@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0" xmlns:xalan="http://xml.apache.org/xslt" xmlns:datetime="http://exslt.org/dates-and-times" xmlns:math="http://exslt.org/math" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:lxslt="http://xml.apache.org/xslt" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:java="http://xml.apache.org/xslt/java" xmlns:set="http://exslt.org/sets" exclude-result-prefixes="xalan java lxslt" xmlns:ns2="http://services.tafj.temenos.com/xsd" xmlns:ns1="http://www.w3.org/2001/XMLSchema" xmlns:ns5="http://www.fiorano.com/fesb/activity/ISOMessage" xmlns:ns3="http://services.tafj.temenos.com/Invoke/Output" xmlns:dateConversion="dateConversion" xmlns:myext="myext" xmlns:strings="strings" extension-element-prefixes="datetime set math dateConversion myext strings">
+  <xsl:import href="GLOBAL_FUNCLET_PATH"></xsl:import>
+  <xsl:output method="xml" indent="yes" encoding="UTF-8" xalan:indent-amount="2" omit-xml-declaration="no"></xsl:output>
+  <xsl:variable name="document" select="/"></xsl:variable>
+  <xsl:variable name="document_OUT_PORT" select="document('OUT_PORT')"></xsl:variable>
+  <xsl:template match="/">
+    <ns5:ISOMessage>
+      <ns5:MTI>
+        <xsl:value-of select="'0110'"></xsl:value-of>
+      </ns5:MTI>
+      <ns5:Fields>
+        <ns5:field_2>
+          <xsl:value-of select="ns5:ISOMessage/ns5:Fields/ns5:field_2"></xsl:value-of>
+        </ns5:field_2>
+        <ns5:field_3>
+          <xsl:value-of select="ns5:ISOMessage/ns5:Fields/ns5:field_3"></xsl:value-of>
+        </ns5:field_3>
+        <ns5:field_4>
+          <xsl:value-of select="ns5:ISOMessage/ns5:Fields/ns5:field_4"></xsl:value-of>
+        </ns5:field_4>
+        <ns5:field_7>
+          <xsl:value-of select="ns5:ISOMessage/ns5:Fields/ns5:field_7"></xsl:value-of>
+        </ns5:field_7>
+        <ns5:field_11>
+          <xsl:value-of select="ns5:ISOMessage/ns5:Fields/ns5:field_11"></xsl:value-of>
+        </ns5:field_11>
+        <ns5:field_12>
+          <xsl:value-of select="ns5:ISOMessage/ns5:Fields/ns5:field_12"></xsl:value-of>
+        </ns5:field_12>
+        <ns5:field_13>
+          <xsl:value-of select="ns5:ISOMessage/ns5:Fields/ns5:field_13"></xsl:value-of>
+        </ns5:field_13>
+        <ns5:field_14>
+          <xsl:value-of select="ns5:ISOMessage/ns5:Fields/ns5:field_14"></xsl:value-of>
+        </ns5:field_14>
+        <ns5:field_15>
+          <xsl:value-of select="ns5:ISOMessage/ns5:Fields/ns5:field_15"></xsl:value-of>
+        </ns5:field_15>
+        <ns5:field_18>
+          <xsl:value-of select="ns5:ISOMessage/ns5:Fields/ns5:field_18"></xsl:value-of>
+        </ns5:field_18>
+        <ns5:field_22>
+          <xsl:value-of select="ns5:ISOMessage/ns5:Fields/ns5:field_22"></xsl:value-of>
+        </ns5:field_22>
+        <ns5:field_25>
+          <xsl:value-of select="ns5:ISOMessage/ns5:Fields/ns5:field_25"></xsl:value-of>
+        </ns5:field_25>
+        <ns5:field_28>
+          <xsl:value-of select="ns5:ISOMessage/ns5:Fields/ns5:field_28"></xsl:value-of>
+        </ns5:field_28>
+        <ns5:field_30>
+          <xsl:value-of select="ns5:ISOMessage/ns5:Fields/ns5:field_30"></xsl:value-of>
+        </ns5:field_30>
+        <ns5:field_32>
+          <xsl:value-of select="ns5:ISOMessage/ns5:Fields/ns5:field_32"></xsl:value-of>
+        </ns5:field_32>
+        <ns5:field_33>
+          <xsl:value-of select="ns5:ISOMessage/ns5:Fields/ns5:field_33"></xsl:value-of>
+        </ns5:field_33>
+        <ns5:field_37>
+          <xsl:value-of select="ns5:ISOMessage/ns5:Fields/ns5:field_37"></xsl:value-of>
+        </ns5:field_37>
+        <ns5:field_39>
+          <xsl:value-of select="'05'"></xsl:value-of>
+        </ns5:field_39>
+        <ns5:field_41>
+          <xsl:value-of select="ns5:ISOMessage/ns5:Fields/ns5:field_41"></xsl:value-of>
+        </ns5:field_41>
+        <ns5:field_42>
+          <xsl:value-of select="ns5:ISOMessage/ns5:Fields/ns5:field_42"></xsl:value-of>
+        </ns5:field_42>
+        <ns5:field_43>
+          <xsl:value-of select="ns5:ISOMessage/ns5:Fields/ns5:field_43"></xsl:value-of>
+        </ns5:field_43>
+        <ns5:field_49>
+          <xsl:value-of select="ns5:ISOMessage/ns5:Fields/ns5:field_49"></xsl:value-of>
+        </ns5:field_49>
+        <ns5:field_56>
+          <xsl:value-of select="ns5:ISOMessage/ns5:Fields/ns5:field_56"></xsl:value-of>
+        </ns5:field_56>
+        <ns5:field_59>
+          <xsl:value-of select="ns5:ISOMessage/ns5:Fields/ns5:field_59"></xsl:value-of>
+        </ns5:field_59>
+        <ns5:field_123>
+          <xsl:value-of select="ns5:ISOMessage/ns5:Fields/ns5:field_123"></xsl:value-of>
+        </ns5:field_123>
+        <ns5:field_127>
+          <ns5:field_127.3>
+            <xsl:value-of select="ns5:ISOMessage/ns5:Fields/ns5:field_127/ns5:field_127.3"></xsl:value-of>
+          </ns5:field_127.3>
+          <ns5:field_127.13>
+            <xsl:value-of select="ns5:ISOMessage/ns5:Fields/ns5:field_127/ns5:field_127.13"></xsl:value-of>
+          </ns5:field_127.13>
+          <ns5:field_127.22>
+            <xsl:value-of select="ns5:ISOMessage/ns5:Fields/ns5:field_127/ns5:field_127.22"></xsl:value-of>
+          </ns5:field_127.22>
+        </ns5:field_127>
+      </ns5:Fields>
+    </ns5:ISOMessage>
+  </xsl:template>
+</xsl:stylesheet>

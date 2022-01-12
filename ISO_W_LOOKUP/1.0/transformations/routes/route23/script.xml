@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0" xmlns:xalan="http://xml.apache.org/xslt" xmlns:datetime="http://exslt.org/dates-and-times" xmlns:math="http://exslt.org/math" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:lxslt="http://xml.apache.org/xslt" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:java="http://xml.apache.org/xslt/java" xmlns:set="http://exslt.org/sets" exclude-result-prefixes="xalan java lxslt" xmlns:ns1="http://www.w3.org/2001/XMLSchema" xmlns:ns2="http://www.fiorano.com/fesb/activity/ISOMessage" xmlns:dateConversion="dateConversion" xmlns:getFTID="getFTID" xmlns:myext="myext" xmlns:strings="strings" extension-element-prefixes="datetime set math dateConversion getFTID myext strings">
+  <xsl:import href="GLOBAL_FUNCLET_PATH"></xsl:import>
+  <xsl:output method="xml" indent="yes" encoding="UTF-8" xalan:indent-amount="2" omit-xml-declaration="no"></xsl:output>
+  <xsl:variable name="document" select="/"></xsl:variable>
+  <xsl:variable name="document_OUT_PORT" select="document('OUT_PORT')"></xsl:variable>
+  <xsl:template match="/">
+    <ns2:ISOMessage>
+      <ns2:MTI>
+        <xsl:value-of select="'0210'"></xsl:value-of>
+      </ns2:MTI>
+      <ns2:Fields>
+        <ns2:field_3>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_3"></xsl:value-of>
+        </ns2:field_3>
+        <ns2:field_4>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_4"></xsl:value-of>
+        </ns2:field_4>
+        <ns2:field_7>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_7"></xsl:value-of>
+        </ns2:field_7>
+        <ns2:field_11>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_11"></xsl:value-of>
+        </ns2:field_11>
+        <ns2:field_12>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_12"></xsl:value-of>
+        </ns2:field_12>
+        <ns2:field_13>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_13"></xsl:value-of>
+        </ns2:field_13>
+        <ns2:field_15>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_15"></xsl:value-of>
+        </ns2:field_15>
+        <ns2:field_25>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_25"></xsl:value-of>
+        </ns2:field_25>
+        <ns2:field_28>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_28"></xsl:value-of>
+        </ns2:field_28>
+        <ns2:field_30>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_30"></xsl:value-of>
+        </ns2:field_30>
+        <ns2:field_32>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_32"></xsl:value-of>
+        </ns2:field_32>
+        <ns2:field_33>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_33"></xsl:value-of>
+        </ns2:field_33>
+        <ns2:field_37>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_37"></xsl:value-of>
+        </ns2:field_37>
+        <ns2:field_39>
+          <xsl:value-of select="'00'"></xsl:value-of>
+        </ns2:field_39>
+        <ns2:field_41>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_41"></xsl:value-of>
+        </ns2:field_41>
+        <ns2:field_42>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_42"></xsl:value-of>
+        </ns2:field_42>
+        <ns2:field_43>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_43"></xsl:value-of>
+        </ns2:field_43>
+        <ns2:field_49>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_49"></xsl:value-of>
+        </ns2:field_49>
+        <ns2:field_54><!--
+          <xsl:variable name="if0">
+            <xsl:choose>
+              <xsl:when test="(normalize-space($document_OUT_PORT/Response/Record/Account_Type))=('1004')">
+                <xsl:value-of select="'10'"></xsl:value-of>
+              </xsl:when>
+            </xsl:choose>
+          </xsl:variable>
+          <xsl:variable name="if1">
+            <xsl:choose>
+              <xsl:when test="($document_OUT_PORT/Response/Record/Currency)=('GHS')">
+                <xsl:value-of select="'936'"></xsl:value-of>
+              </xsl:when>
+              <xsl:when test="($document_OUT_PORT/Response/Record/Currency)=('USD')">
+                <xsl:value-of select="'840'"></xsl:value-of>
+              </xsl:when>
+              <xsl:when test="($document_OUT_PORT/Response/Record/Currency)=('GBP')">
+                <xsl:value-of select="'826'"></xsl:value-of>
+              </xsl:when>
+              <xsl:when test="($document_OUT_PORT/Response/Record/Currency)=('EUR')">
+                <xsl:value-of select="'978'"></xsl:value-of>
+              </xsl:when>
+            </xsl:choose>
+          </xsl:variable>
+          <xsl:variable name="if2">
+            <xsl:choose>
+              <xsl:when test="starts-with(normalize-space($document_OUT_PORT/Response/Record/Ledger_Balance),'-')">
+                <xsl:value-of select="'D'"></xsl:value-of>
+              </xsl:when>
+              <xsl:otherwise>
+                <xsl:value-of select="'C'"></xsl:value-of>
+              </xsl:otherwise>
+            </xsl:choose>
+          </xsl:variable>
+          <xsl:value-of select="concat($if0,'01',$if1,$if2,myext:zerofill(string(($document_OUT_PORT/Response/Record/Ledger_Balance)*('100')),string('10')))"></xsl:value-of>
+          <xsl:variable name="if3">
+            <xsl:choose>
+              <xsl:when test="(normalize-space($document_OUT_PORT/Response/Record/Account_Type))=('1004')">
+                <xsl:value-of select="'10'"></xsl:value-of>
+              </xsl:when>
+            </xsl:choose>
+          </xsl:variable>
+          <xsl:variable name="if4">
+            <xsl:choose>
+              <xsl:when test="($document_OUT_PORT/Response/Record/Currency)=('GHS')">
+                <xsl:value-of select="'936'"></xsl:value-of>
+              </xsl:when>
+              <xsl:when test="($document_OUT_PORT/Response/Record/Currency)=('USD')">
+                <xsl:value-of select="'840'"></xsl:value-of>
+              </xsl:when>
+              <xsl:when test="($document_OUT_PORT/Response/Record/Currency)=('GBP')">
+                <xsl:value-of select="'826'"></xsl:value-of>
+              </xsl:when>
+              <xsl:when test="($document_OUT_PORT/Response/Record/Currency)=('EUR')">
+                <xsl:value-of select="'978'"></xsl:value-of>
+              </xsl:when>
+            </xsl:choose>
+          </xsl:variable>
+          <xsl:variable name="if5">
+            <xsl:choose>
+              <xsl:when test="starts-with(normalize-space($document_OUT_PORT/Response/Record/Available_Balance),'-')">
+                <xsl:value-of select="'D'"></xsl:value-of>
+              </xsl:when>
+              <xsl:otherwise>
+                <xsl:value-of select="'C'"></xsl:value-of>
+              </xsl:otherwise>
+            </xsl:choose>
+          </xsl:variable>
+          <xsl:value-of select="concat($if3,'02',$if4,$if5,myext:zerofill(string(($document_OUT_PORT/Response/Record/Available_Balance)*('100')),string('10')))"></xsl:value-of>-->
+<xsl:variable name="acctype">
+	<xsl:choose>
+		<xsl:when test="(normalize-space($document_OUT_PORT/Response/Record/Account_Type))=('1004')">
+			<xsl:value-of select="'10'"/>
+		</xsl:when>
+	<xsl:otherwise>
+    <xsl:value-of select="'10'"></xsl:value-of>
+</xsl:otherwise>
+	</xsl:choose>
+</xsl:variable>
+<xsl:variable name="curr">
+	<xsl:choose>
+		<xsl:when test="($document_OUT_PORT/Response/Record/Currency)=('GHS')">
+			<xsl:value-of select="'936'"/>
+		</xsl:when>
+		<xsl:when test="($document_OUT_PORT/Response/Record/Currency)=('USD')">
+			<xsl:value-of select="'840'"/>
+		</xsl:when>
+		<xsl:when test="($document_OUT_PORT/Response/Record/Currency)=('GBP')">
+			<xsl:value-of select="'826'"/>
+		</xsl:when>
+		<xsl:when test="($document_OUT_PORT/Response/Record/Currency)=('EUR')">
+			<xsl:value-of select="'978'"/>
+		</xsl:when>
+	</xsl:choose>
+</xsl:variable>
+<xsl:variable name="LB">
+	<xsl:choose>
+		<xsl:when test="starts-with(normalize-space($document_OUT_PORT/Response/Record/Ledger_Balance),'-')">
+			<xsl:value-of select="'D'"/>
+		</xsl:when>
+		<xsl:otherwise>
+			<xsl:value-of select="'C'"/>
+		</xsl:otherwise>
+	</xsl:choose>
+</xsl:variable>
+
+
+<xsl:variable name="LedAmt">
+	<xsl:choose>
+		<xsl:when test="starts-with(normalize-space($document_OUT_PORT/Response/Record/Ledger_Balance),'-')">
+			<xsl:value-of select="myext:zerofill(string(ceiling(($document_OUT_PORT/Response/Record/Ledger_Balance)*('100') * ('-1'))),string('12'))"/>
+		</xsl:when>
+		<xsl:otherwise>
+			<xsl:value-of select="myext:zerofill(string(ceiling(($document_OUT_PORT/Response/Record/Ledger_Balance)*('100'))),string('12'))"/>
+		</xsl:otherwise>
+	</xsl:choose>
+</xsl:variable>
+
+
+
+<xsl:value-of select="concat($acctype,'01',$curr,$LB,$LedAmt)"/>
+
+
+<xsl:variable name="AB">
+	<xsl:choose>
+		<xsl:when test="starts-with(normalize-space($document_OUT_PORT/Response/Record/Available_Balance),'-')">
+			<xsl:value-of select="'D'"/>
+		</xsl:when>
+		<xsl:otherwise>
+			<xsl:value-of select="'C'"/>
+		</xsl:otherwise>
+	</xsl:choose>
+</xsl:variable>
+
+
+<xsl:variable name="Availamt">
+	<xsl:choose>
+		<xsl:when test="starts-with(normalize-space($document_OUT_PORT/Response/Record/Available_Balance),'-')">
+			<xsl:value-of select="myext:zerofill(string(ceiling(($document_OUT_PORT/Response/Record/Available_Balance)*('100') * ('-1'))),string('12'))"/>
+		</xsl:when>
+		<xsl:otherwise>
+			<xsl:value-of select="myext:zerofill(string(ceiling(($document_OUT_PORT/Response/Record/Available_Balance)*('100'))),string('12'))"/>
+		</xsl:otherwise>
+	</xsl:choose>
+</xsl:variable>
+
+<xsl:value-of select="concat($acctype,'02',$curr,$AB,$Availamt)"/></ns2:field_54>
+        <ns2:field_56>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_56"></xsl:value-of>
+        </ns2:field_56>
+        <ns2:field_59>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_59"></xsl:value-of>
+        </ns2:field_59>
+        <ns2:field_102>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_102"></xsl:value-of>
+        </ns2:field_102>
+        <ns2:field_123>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_123"></xsl:value-of>
+        </ns2:field_123>
+        <ns2:field_127>
+          <ns2:field_127.17>
+            <xsl:value-of select="$document_OUT_PORT/Response/Record/Account_Name"></xsl:value-of>
+          </ns2:field_127.17>
+        </ns2:field_127>
+      </ns2:Fields>
+    </ns2:ISOMessage>
+  </xsl:template>
+<!--The list of Extensions defined by user-->
+  <lxslt:component prefix="myext" functions="zerofill">
+    <lxslt:script lang="javascript"><![CDATA[function compute(expr){
+	return eval(expr);
+}
+
+function nextMillenium(){
+	d = new Date()    //today's date
+	mill=new Date(3000, 00, 01, 00, 00, 00)    //Next millennium start date
+	diff = mill-d    //difference in milliseconds
+	mtg = new String(diff/86400000)    //calculate days and convert to string
+	point=mtg.indexOf(".")    //find the decimal point
+	days=mtg.substring(0,point)    //get just the whole days
+	return "There are only " + days + " days remaining to the start of the next millennium."; 
+}
+
+function replace(input, pattern, flags, str){
+	return input.replace(new RegExp(pattern, flags), str);
+}
+
+function trimBOM(str){
+ var n = str.indexOf("?xml");
+  var x = str.substr(n-1);
+	return   x;
+}
+
+
+function zerofill(number, length) {
+    var result = number.toString();
+    var pad = length - result.length;
+
+    while(pad > 0) {
+        result = '0' + result;
+        pad--;
+    }
+
+    return result;
+}]]></lxslt:script>
+  </lxslt:component>
+</xsl:stylesheet>

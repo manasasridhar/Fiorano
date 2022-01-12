@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0" xmlns:xalan="http://xml.apache.org/xslt" xmlns:datetime="http://exslt.org/dates-and-times" xmlns:math="http://exslt.org/math" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:lxslt="http://xml.apache.org/xslt" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:java="http://xml.apache.org/xslt/java" xmlns:set="http://exslt.org/sets" exclude-result-prefixes="xalan java lxslt" xmlns:ns4="http://www.w3.org/2001/XMLSchema" xmlns:ns2="http://www.fiorano.com/fesb/activity/DB1/Request" xmlns:ns3="http://www.fiorano.com/fesb/activity/ISOMessage" xmlns:dateConversion="dateConversion" xmlns:getFTID="getFTID" xmlns:myext="myext" xmlns:strings="strings" extension-element-prefixes="datetime set math dateConversion getFTID myext strings">
+  <xsl:import href="GLOBAL_FUNCLET_PATH"></xsl:import>
+  <xsl:output method="xml" indent="yes" encoding="UTF-8" xalan:indent-amount="2" omit-xml-declaration="no"></xsl:output>
+  <xsl:variable name="document" select="/"></xsl:variable>
+  <xsl:variable name="document_OUT_PORT_1" select="document('OUT_PORT_1')"></xsl:variable>
+  <xsl:template match="/">
+    <ns2:SQL_CFG_1><!--
+      <ns2:sel>
+        <ns2:MTI>
+          <xsl:value-of select="$document_OUT_PORT_1/ns3:ISOMessage/ns3:MTI"></xsl:value-of>
+        </ns2:MTI>
+        <ns2:TranType>
+          <xsl:value-of select="substring($document_OUT_PORT_1/ns3:ISOMessage/ns3:Fields/ns3:field_3,'1','2')"></xsl:value-of>
+          <xsl:value-of select="java:_setStringProperty($_TIF_MESSAGE_, 'trantype', substring($document_OUT_PORT_1/ns3:ISOMessage/ns3:Fields/ns3:field_3,'1','2'))"></xsl:value-of>
+        </ns2:TranType>
+        <ns2:SourceNode>
+          <xsl:value-of select="substring-before($document_OUT_PORT_1/ns3:ISOMessage/ns3:Fields/ns3:field_127/ns3:field_127.3,'   ')"></xsl:value-of>
+          <xsl:value-of select="java:_setStringProperty($_TIF_MESSAGE_, 'sourcenode', substring-before($document_OUT_PORT_1/ns3:ISOMessage/ns3:Fields/ns3:field_127/ns3:field_127.3,'   '))"></xsl:value-of>
+        </ns2:SourceNode>
+        <ns2:SinkNode>
+          <xsl:variable name="if0">
+            <xsl:choose>
+              <xsl:when test="contains($document_OUT_PORT_1/ns3:ISOMessage/ns3:Fields/ns3:field_127/ns3:field_127.3,'Snk')">
+                <xsl:value-of select="concat(substring-before(substring-after($document_OUT_PORT_1/ns3:ISOMessage/ns3:Fields/ns3:field_127/ns3:field_127.3,'   '),'Snk'),'Snk')"></xsl:value-of>
+              </xsl:when>
+              <xsl:otherwise>
+                <xsl:value-of select="concat(substring-before(substring-after($document_OUT_PORT_1/ns3:ISOMessage/ns3:Fields/ns3:field_127/ns3:field_127.3,'   '),'Acq'),'Acq')"></xsl:value-of>
+              </xsl:otherwise>
+            </xsl:choose>
+          </xsl:variable>
+          <xsl:value-of select="$if0"></xsl:value-of>
+          <xsl:variable name="if1">
+            <xsl:choose>
+              <xsl:when test="contains($document_OUT_PORT_1/ns3:ISOMessage/ns3:Fields/ns3:field_127/ns3:field_127.3,'Snk')">
+                <xsl:value-of select="concat(substring-before(substring-after($document_OUT_PORT_1/ns3:ISOMessage/ns3:Fields/ns3:field_127/ns3:field_127.3,'   '),'Snk'),'Snk')"></xsl:value-of>
+              </xsl:when>
+              <xsl:otherwise>
+                <xsl:value-of select="concat(substring-before(substring-after($document_OUT_PORT_1/ns3:ISOMessage/ns3:Fields/ns3:field_127/ns3:field_127.3,'   '),'Acq'),'Acq')"></xsl:value-of>
+              </xsl:otherwise>
+            </xsl:choose>
+          </xsl:variable>
+          <xsl:value-of select="java:_setStringProperty($_TIF_MESSAGE_, 'sinknode', $if1)"></xsl:value-of>
+        </ns2:SinkNode>
+      </ns2:sel>-->
+      <ns2:sel1>
+        <ns2:MTI>
+          <xsl:value-of select="$document_OUT_PORT_1/ns3:ISOMessage/ns3:MTI"></xsl:value-of>
+        </ns2:MTI>
+        <ns2:TranType>
+          <xsl:value-of select="java:_setStringProperty($_TIF_MESSAGE_, 'trantype', substring($document_OUT_PORT_1/ns3:ISOMessage/ns3:Fields/ns3:field_3,'1','2'))"></xsl:value-of>
+          <xsl:value-of select="substring($document_OUT_PORT_1/ns3:ISOMessage/ns3:Fields/ns3:field_3,'1','2')"></xsl:value-of>
+        </ns2:TranType>
+        <ns2:SourceNode>
+          <xsl:value-of select="normalize-space(substring($document_OUT_PORT_1/ns3:ISOMessage/ns3:Fields/ns3:field_127/ns3:field_127.3,'1','12'))"></xsl:value-of>
+          <xsl:value-of select="java:_setStringProperty($_TIF_MESSAGE_, 'sourcenode', normalize-space(substring($document_OUT_PORT_1/ns3:ISOMessage/ns3:Fields/ns3:field_127/ns3:field_127.3,'1','12')))"></xsl:value-of>
+        </ns2:SourceNode>
+        <ns2:SinkNode>
+          <xsl:value-of select="normalize-space(substring($document_OUT_PORT_1/ns3:ISOMessage/ns3:Fields/ns3:field_127/ns3:field_127.3,'13','12'))"></xsl:value-of>
+          <xsl:value-of select="java:_setStringProperty($_TIF_MESSAGE_, 'sinknode', normalize-space(substring($document_OUT_PORT_1/ns3:ISOMessage/ns3:Fields/ns3:field_127/ns3:field_127.3,'13','12')))"></xsl:value-of>
+        </ns2:SinkNode>
+      </ns2:sel1>
+    </ns2:SQL_CFG_1>
+  </xsl:template>
+<!--The list of parameters defined by user-->
+  <xsl:param name="_TIF_MESSAGE_"></xsl:param>
+</xsl:stylesheet>

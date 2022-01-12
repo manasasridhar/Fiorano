@@ -1,0 +1,814 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0" xmlns:xalan="http://xml.apache.org/xslt" xmlns:datetime="http://exslt.org/dates-and-times" xmlns:math="http://exslt.org/math" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:lxslt="http://xml.apache.org/xslt" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:java="http://xml.apache.org/xslt/java" xmlns:set="http://exslt.org/sets" exclude-result-prefixes="xalan java lxslt" xmlns:ns1="http://www.w3.org/2001/XMLSchema" xmlns:ns2="http://www.fiorano.com/fesb/activity/ISOMessage" xmlns:ns3="http://www.fiorano.com/fesb/activity/DB1/Response" xmlns:dateConversion="dateConversion" xmlns:getFTID="getFTID" xmlns:myext="myext" xmlns:strings="strings" extension-element-prefixes="datetime set math dateConversion getFTID myext strings">
+  <xsl:import href="GLOBAL_FUNCLET_PATH"></xsl:import>
+  <xsl:output method="xml" indent="yes" encoding="UTF-8" xalan:indent-amount="2" omit-xml-declaration="no"></xsl:output>
+  <xsl:variable name="document" select="/"></xsl:variable>
+  <xsl:variable name="document_OUT_PORT" select="document('OUT_PORT')"></xsl:variable>
+  <xsl:template match="/">
+    <ns2:ISOMessage>
+      <ns2:MTI>
+        <xsl:value-of select="ns2:ISOMessage/ns2:MTI"></xsl:value-of>
+      </ns2:MTI>
+      <ns2:Fields>
+        <ns2:field_1>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_1"></xsl:value-of>
+        </ns2:field_1>
+        <ns2:field_2>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_2"></xsl:value-of>
+        </ns2:field_2>
+        <ns2:field_3>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_3"></xsl:value-of>
+        </ns2:field_3>
+        <ns2:field_4>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_4"></xsl:value-of>
+        </ns2:field_4>
+        <ns2:field_5>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_5"></xsl:value-of>
+        </ns2:field_5>
+        <ns2:field_6>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_6"></xsl:value-of>
+        </ns2:field_6>
+        <ns2:field_7>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_7"></xsl:value-of>
+        </ns2:field_7>
+        <ns2:field_8>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_8"></xsl:value-of>
+        </ns2:field_8>
+        <ns2:field_9>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_9"></xsl:value-of>
+        </ns2:field_9>
+        <ns2:field_10>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_10"></xsl:value-of>
+        </ns2:field_10>
+        <ns2:field_11>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_11"></xsl:value-of>
+        </ns2:field_11>
+        <ns2:field_12>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_12"></xsl:value-of>
+        </ns2:field_12>
+        <ns2:field_13>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_13"></xsl:value-of>
+        </ns2:field_13>
+        <ns2:field_14>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_14"></xsl:value-of>
+        </ns2:field_14>
+        <ns2:field_15>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_15"></xsl:value-of>
+        </ns2:field_15>
+        <ns2:field_16>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_16"></xsl:value-of>
+        </ns2:field_16>
+        <ns2:field_17>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_17"></xsl:value-of>
+        </ns2:field_17>
+        <ns2:field_18>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_18"></xsl:value-of>
+        </ns2:field_18>
+        <ns2:field_19>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_19"></xsl:value-of>
+        </ns2:field_19>
+        <ns2:field_20>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_20"></xsl:value-of>
+        </ns2:field_20>
+        <ns2:field_21>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_21"></xsl:value-of>
+        </ns2:field_21>
+        <ns2:field_22>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_22"></xsl:value-of>
+        </ns2:field_22>
+        <ns2:field_23>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_23"></xsl:value-of>
+        </ns2:field_23>
+        <ns2:field_24>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_24"></xsl:value-of>
+        </ns2:field_24>
+        <ns2:field_25>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_25"></xsl:value-of>
+        </ns2:field_25>
+        <ns2:field_26>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_26"></xsl:value-of>
+        </ns2:field_26>
+        <ns2:field_27>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_27"></xsl:value-of>
+        </ns2:field_27>
+        <ns2:field_28>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_28"></xsl:value-of>
+        </ns2:field_28>
+        <ns2:field_29>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_29"></xsl:value-of>
+        </ns2:field_29>
+        <ns2:field_30>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_30"></xsl:value-of>
+        </ns2:field_30>
+        <ns2:field_31>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_31"></xsl:value-of>
+        </ns2:field_31>
+        <ns2:field_32>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_32"></xsl:value-of>
+        </ns2:field_32>
+        <ns2:field_33>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_33"></xsl:value-of>
+        </ns2:field_33>
+        <ns2:field_34>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_34"></xsl:value-of>
+        </ns2:field_34>
+        <ns2:field_35>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_35"></xsl:value-of>
+        </ns2:field_35>
+        <ns2:field_36>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_36"></xsl:value-of>
+        </ns2:field_36>
+        <ns2:field_37>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_37"></xsl:value-of>
+        </ns2:field_37>
+        <ns2:field_38>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_38"></xsl:value-of>
+        </ns2:field_38>
+        <ns2:field_39>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_39"></xsl:value-of>
+        </ns2:field_39>
+        <ns2:field_40>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_40"></xsl:value-of>
+        </ns2:field_40>
+        <ns2:field_41>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_41"></xsl:value-of>
+        </ns2:field_41>
+        <ns2:field_42>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_42"></xsl:value-of>
+        </ns2:field_42>
+        <ns2:field_43>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_43"></xsl:value-of>
+        </ns2:field_43>
+        <ns2:field_44>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_44"></xsl:value-of>
+        </ns2:field_44>
+        <ns2:field_45>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_45"></xsl:value-of>
+        </ns2:field_45>
+        <ns2:field_46>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_46"></xsl:value-of>
+        </ns2:field_46>
+        <ns2:field_47>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_47"></xsl:value-of>
+        </ns2:field_47>
+        <ns2:field_48>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_48"></xsl:value-of>
+        </ns2:field_48>
+        <ns2:field_49>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_49"></xsl:value-of>
+        </ns2:field_49>
+        <ns2:field_50>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_50"></xsl:value-of>
+        </ns2:field_50>
+        <ns2:field_51>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_51"></xsl:value-of>
+        </ns2:field_51>
+        <ns2:field_52>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_52"></xsl:value-of>
+        </ns2:field_52>
+        <ns2:field_53>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_53"></xsl:value-of>
+        </ns2:field_53>
+        <ns2:field_54>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_54"></xsl:value-of>
+        </ns2:field_54>
+        <ns2:field_55>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_55"></xsl:value-of>
+        </ns2:field_55>
+        <ns2:field_56>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_56"></xsl:value-of>
+        </ns2:field_56>
+        <ns2:field_57>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_57"></xsl:value-of>
+        </ns2:field_57>
+        <ns2:field_58>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_58"></xsl:value-of>
+        </ns2:field_58>
+        <ns2:field_59>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_59"></xsl:value-of>
+        </ns2:field_59>
+        <ns2:field_60>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_60"></xsl:value-of>
+        </ns2:field_60>
+        <ns2:field_61>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_61"></xsl:value-of>
+        </ns2:field_61>
+        <ns2:field_62>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_62"></xsl:value-of>
+        </ns2:field_62>
+        <ns2:field_63>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_63"></xsl:value-of>
+        </ns2:field_63>
+        <ns2:field_64>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_64"></xsl:value-of>
+        </ns2:field_64>
+        <ns2:field_65>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_65"></xsl:value-of>
+        </ns2:field_65>
+        <ns2:field_66>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_66"></xsl:value-of>
+        </ns2:field_66>
+        <ns2:field_67>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_67"></xsl:value-of>
+        </ns2:field_67>
+        <ns2:field_68>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_68"></xsl:value-of>
+        </ns2:field_68>
+        <ns2:field_69>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_69"></xsl:value-of>
+        </ns2:field_69>
+        <ns2:field_70>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_70"></xsl:value-of>
+        </ns2:field_70>
+        <ns2:field_71>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_71"></xsl:value-of>
+        </ns2:field_71>
+        <ns2:field_72>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_72"></xsl:value-of>
+        </ns2:field_72>
+        <ns2:field_73>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_73"></xsl:value-of>
+        </ns2:field_73>
+        <ns2:field_74>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_74"></xsl:value-of>
+        </ns2:field_74>
+        <ns2:field_75>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_75"></xsl:value-of>
+        </ns2:field_75>
+        <ns2:field_76>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_76"></xsl:value-of>
+        </ns2:field_76>
+        <ns2:field_77>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_77"></xsl:value-of>
+        </ns2:field_77>
+        <ns2:field_78>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_78"></xsl:value-of>
+        </ns2:field_78>
+        <ns2:field_79>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_79"></xsl:value-of>
+        </ns2:field_79>
+        <ns2:field_80>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_80"></xsl:value-of>
+        </ns2:field_80>
+        <ns2:field_81>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_81"></xsl:value-of>
+        </ns2:field_81>
+        <ns2:field_82>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_82"></xsl:value-of>
+        </ns2:field_82>
+        <ns2:field_83>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_83"></xsl:value-of>
+        </ns2:field_83>
+        <ns2:field_84>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_84"></xsl:value-of>
+        </ns2:field_84>
+        <ns2:field_85>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_85"></xsl:value-of>
+        </ns2:field_85>
+        <ns2:field_86>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_86"></xsl:value-of>
+        </ns2:field_86>
+        <ns2:field_87>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_87"></xsl:value-of>
+        </ns2:field_87>
+        <ns2:field_88>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_88"></xsl:value-of>
+        </ns2:field_88>
+        <ns2:field_89>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_89"></xsl:value-of>
+        </ns2:field_89>
+        <ns2:field_90>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_90"></xsl:value-of>
+        </ns2:field_90>
+        <ns2:field_91>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_91"></xsl:value-of>
+        </ns2:field_91>
+        <ns2:field_92>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_92"></xsl:value-of>
+        </ns2:field_92>
+        <ns2:field_93>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_93"></xsl:value-of>
+        </ns2:field_93>
+        <ns2:field_94>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_94"></xsl:value-of>
+        </ns2:field_94>
+        <ns2:field_95>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_95"></xsl:value-of>
+        </ns2:field_95>
+        <ns2:field_96>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_96"></xsl:value-of>
+        </ns2:field_96>
+        <ns2:field_97>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_97"></xsl:value-of>
+        </ns2:field_97>
+        <ns2:field_98>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_98"></xsl:value-of>
+        </ns2:field_98>
+        <ns2:field_99>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_99"></xsl:value-of>
+        </ns2:field_99>
+        <ns2:field_100>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_100"></xsl:value-of>
+        </ns2:field_100>
+        <ns2:field_101>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_101"></xsl:value-of>
+        </ns2:field_101>
+        <ns2:field_102>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_102"></xsl:value-of>
+        </ns2:field_102>
+        <ns2:field_103>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_103"></xsl:value-of>
+        </ns2:field_103>
+        <ns2:field_104>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_104"></xsl:value-of>
+        </ns2:field_104>
+        <ns2:field_105>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_105"></xsl:value-of>
+        </ns2:field_105>
+        <ns2:field_106>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_106"></xsl:value-of>
+        </ns2:field_106>
+        <ns2:field_107>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_107"></xsl:value-of>
+        </ns2:field_107>
+        <ns2:field_108>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_108"></xsl:value-of>
+        </ns2:field_108>
+        <ns2:field_109>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_109"></xsl:value-of>
+        </ns2:field_109>
+        <ns2:field_110>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_110"></xsl:value-of>
+        </ns2:field_110>
+        <ns2:field_111>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_111"></xsl:value-of>
+        </ns2:field_111>
+        <ns2:field_112>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_112"></xsl:value-of>
+        </ns2:field_112>
+        <ns2:field_113>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_113"></xsl:value-of>
+        </ns2:field_113>
+        <ns2:field_114>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_114"></xsl:value-of>
+        </ns2:field_114>
+        <ns2:field_115>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_115"></xsl:value-of>
+        </ns2:field_115>
+        <ns2:field_116>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_116"></xsl:value-of>
+        </ns2:field_116>
+        <ns2:field_117>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_117"></xsl:value-of>
+        </ns2:field_117>
+        <ns2:field_118>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_118"></xsl:value-of>
+        </ns2:field_118>
+        <ns2:field_119>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_119"></xsl:value-of>
+        </ns2:field_119>
+        <ns2:field_120>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_120"></xsl:value-of>
+        </ns2:field_120>
+        <ns2:field_121>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_121"></xsl:value-of>
+        </ns2:field_121>
+        <ns2:field_122>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_122"></xsl:value-of>
+        </ns2:field_122>
+        <ns2:field_123>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_123"></xsl:value-of>
+        </ns2:field_123>
+        <ns2:field_124>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_124"></xsl:value-of>
+        </ns2:field_124>
+        <ns2:field_125>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_125"></xsl:value-of>
+        </ns2:field_125>
+        <ns2:field_126>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_126"></xsl:value-of>
+        </ns2:field_126>
+        <ns2:field_127>
+          <ns2:field_127.1>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.1"></xsl:value-of>
+          </ns2:field_127.1>
+          <ns2:field_127.2>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.2"></xsl:value-of>
+          </ns2:field_127.2>
+          <ns2:field_127.3>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.3"></xsl:value-of>
+          </ns2:field_127.3>
+          <ns2:field_127.4>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.4"></xsl:value-of>
+          </ns2:field_127.4>
+          <ns2:field_127.5>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.5"></xsl:value-of>
+          </ns2:field_127.5>
+          <ns2:field_127.6>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.6"></xsl:value-of>
+          </ns2:field_127.6>
+          <ns2:field_127.7>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.7"></xsl:value-of>
+          </ns2:field_127.7>
+          <ns2:field_127.8>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.8"></xsl:value-of>
+          </ns2:field_127.8>
+          <ns2:field_127.9>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.9"></xsl:value-of>
+          </ns2:field_127.9>
+          <ns2:field_127.10>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.10"></xsl:value-of>
+          </ns2:field_127.10>
+          <ns2:field_127.11>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.11"></xsl:value-of>
+          </ns2:field_127.11>
+          <ns2:field_127.12>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.12"></xsl:value-of>
+          </ns2:field_127.12>
+          <ns2:field_127.13>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.13"></xsl:value-of>
+          </ns2:field_127.13>
+          <ns2:field_127.14>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.14"></xsl:value-of>
+          </ns2:field_127.14>
+          <ns2:field_127.15>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.15"></xsl:value-of>
+          </ns2:field_127.15>
+          <ns2:field_127.16>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.16"></xsl:value-of>
+          </ns2:field_127.16>
+          <ns2:field_127.17>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.17"></xsl:value-of>
+          </ns2:field_127.17>
+          <ns2:field_127.18>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.18"></xsl:value-of>
+          </ns2:field_127.18>
+          <ns2:field_127.19>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.19"></xsl:value-of>
+          </ns2:field_127.19>
+          <ns2:field_127.20>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.20"></xsl:value-of>
+          </ns2:field_127.20>
+          <ns2:field_127.21>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.21"></xsl:value-of>
+          </ns2:field_127.21>
+          <ns2:field_127.22>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.22"></xsl:value-of>
+          </ns2:field_127.22>
+          <ns2:field_127.23>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.23"></xsl:value-of>
+          </ns2:field_127.23>
+          <ns2:field_127.24>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.24"></xsl:value-of>
+          </ns2:field_127.24>
+          <ns2:field_127.25>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.25"></xsl:value-of>
+          </ns2:field_127.25>
+          <ns2:field_127.26>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.26"></xsl:value-of>
+          </ns2:field_127.26>
+          <ns2:field_127.27>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.27"></xsl:value-of>
+          </ns2:field_127.27>
+          <ns2:field_127.28>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.28"></xsl:value-of>
+          </ns2:field_127.28>
+          <ns2:field_127.29>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.29"></xsl:value-of>
+          </ns2:field_127.29>
+          <ns2:field_127.30>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.30"></xsl:value-of>
+          </ns2:field_127.30>
+          <ns2:field_127.31>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.31"></xsl:value-of>
+          </ns2:field_127.31>
+          <ns2:field_127.32>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.32"></xsl:value-of>
+          </ns2:field_127.32>
+          <ns2:field_127.33>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.33"></xsl:value-of>
+          </ns2:field_127.33>
+          <ns2:field_127.34>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.34"></xsl:value-of>
+          </ns2:field_127.34>
+          <ns2:field_127.35>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.35"></xsl:value-of>
+          </ns2:field_127.35>
+          <ns2:field_127.36>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.36"></xsl:value-of>
+          </ns2:field_127.36>
+          <ns2:field_127.37>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.37"></xsl:value-of>
+          </ns2:field_127.37>
+          <ns2:field_127.38>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.38"></xsl:value-of>
+          </ns2:field_127.38>
+          <ns2:field_127.39>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.39"></xsl:value-of>
+          </ns2:field_127.39>
+          <ns2:field_127.40>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.40"></xsl:value-of>
+          </ns2:field_127.40>
+          <ns2:field_127.41>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.41"></xsl:value-of>
+          </ns2:field_127.41>
+          <ns2:field_127.42>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.42"></xsl:value-of>
+          </ns2:field_127.42>
+          <ns2:field_127.43>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.43"></xsl:value-of>
+          </ns2:field_127.43>
+          <ns2:field_127.44>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.44"></xsl:value-of>
+          </ns2:field_127.44>
+          <ns2:field_127.45>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.45"></xsl:value-of>
+          </ns2:field_127.45>
+          <ns2:field_127.46>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.46"></xsl:value-of>
+          </ns2:field_127.46>
+          <ns2:field_127.47>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.47"></xsl:value-of>
+          </ns2:field_127.47>
+          <ns2:field_127.48>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.48"></xsl:value-of>
+          </ns2:field_127.48>
+          <ns2:field_127.49>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.49"></xsl:value-of>
+          </ns2:field_127.49>
+          <ns2:field_127.50>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.50"></xsl:value-of>
+          </ns2:field_127.50>
+          <ns2:field_127.51>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.51"></xsl:value-of>
+          </ns2:field_127.51>
+          <ns2:field_127.52>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.52"></xsl:value-of>
+          </ns2:field_127.52>
+          <ns2:field_127.53>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.53"></xsl:value-of>
+          </ns2:field_127.53>
+          <ns2:field_127.54>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.54"></xsl:value-of>
+          </ns2:field_127.54>
+          <ns2:field_127.55>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.55"></xsl:value-of>
+          </ns2:field_127.55>
+          <ns2:field_127.56>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.56"></xsl:value-of>
+          </ns2:field_127.56>
+          <ns2:field_127.57>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.57"></xsl:value-of>
+          </ns2:field_127.57>
+          <ns2:field_127.58>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.58"></xsl:value-of>
+          </ns2:field_127.58>
+          <ns2:field_127.59>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.59"></xsl:value-of>
+          </ns2:field_127.59>
+          <ns2:field_127.60>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.60"></xsl:value-of>
+          </ns2:field_127.60>
+          <ns2:field_127.61>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.61"></xsl:value-of>
+          </ns2:field_127.61>
+          <ns2:field_127.62>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.62"></xsl:value-of>
+          </ns2:field_127.62>
+          <ns2:field_127.63>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.63"></xsl:value-of>
+          </ns2:field_127.63>
+          <ns2:field_127.64>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.64"></xsl:value-of>
+          </ns2:field_127.64>
+          <ns2:field_127.65>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.65"></xsl:value-of>
+          </ns2:field_127.65>
+          <ns2:field_127.66>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.66"></xsl:value-of>
+          </ns2:field_127.66>
+          <ns2:field_127.67>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.67"></xsl:value-of>
+          </ns2:field_127.67>
+          <ns2:field_127.68>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.68"></xsl:value-of>
+          </ns2:field_127.68>
+          <ns2:field_127.69>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.69"></xsl:value-of>
+          </ns2:field_127.69>
+          <ns2:field_127.70>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.70"></xsl:value-of>
+          </ns2:field_127.70>
+          <ns2:field_127.71>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.71"></xsl:value-of>
+          </ns2:field_127.71>
+          <ns2:field_127.72>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.72"></xsl:value-of>
+          </ns2:field_127.72>
+          <ns2:field_127.73>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.73"></xsl:value-of>
+          </ns2:field_127.73>
+          <ns2:field_127.74>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.74"></xsl:value-of>
+          </ns2:field_127.74>
+          <ns2:field_127.75>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.75"></xsl:value-of>
+          </ns2:field_127.75>
+          <ns2:field_127.76>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.76"></xsl:value-of>
+          </ns2:field_127.76>
+          <ns2:field_127.77>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.77"></xsl:value-of>
+          </ns2:field_127.77>
+          <ns2:field_127.78>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.78"></xsl:value-of>
+          </ns2:field_127.78>
+          <ns2:field_127.79>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.79"></xsl:value-of>
+          </ns2:field_127.79>
+          <ns2:field_127.80>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.80"></xsl:value-of>
+          </ns2:field_127.80>
+          <ns2:field_127.81>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.81"></xsl:value-of>
+          </ns2:field_127.81>
+          <ns2:field_127.82>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.82"></xsl:value-of>
+          </ns2:field_127.82>
+          <ns2:field_127.83>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.83"></xsl:value-of>
+          </ns2:field_127.83>
+          <ns2:field_127.84>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.84"></xsl:value-of>
+          </ns2:field_127.84>
+          <ns2:field_127.85>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.85"></xsl:value-of>
+          </ns2:field_127.85>
+          <ns2:field_127.86>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.86"></xsl:value-of>
+          </ns2:field_127.86>
+          <ns2:field_127.87>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.87"></xsl:value-of>
+          </ns2:field_127.87>
+          <ns2:field_127.88>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.88"></xsl:value-of>
+          </ns2:field_127.88>
+          <ns2:field_127.89>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.89"></xsl:value-of>
+          </ns2:field_127.89>
+          <ns2:field_127.90>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.90"></xsl:value-of>
+          </ns2:field_127.90>
+          <ns2:field_127.91>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.91"></xsl:value-of>
+          </ns2:field_127.91>
+          <ns2:field_127.92>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.92"></xsl:value-of>
+          </ns2:field_127.92>
+          <ns2:field_127.93>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.93"></xsl:value-of>
+          </ns2:field_127.93>
+          <ns2:field_127.94>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.94"></xsl:value-of>
+          </ns2:field_127.94>
+          <ns2:field_127.95>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.95"></xsl:value-of>
+          </ns2:field_127.95>
+          <ns2:field_127.96>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.96"></xsl:value-of>
+          </ns2:field_127.96>
+          <ns2:field_127.97>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.97"></xsl:value-of>
+          </ns2:field_127.97>
+          <ns2:field_127.98>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.98"></xsl:value-of>
+          </ns2:field_127.98>
+          <ns2:field_127.99>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.99"></xsl:value-of>
+          </ns2:field_127.99>
+          <ns2:field_127.100>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.100"></xsl:value-of>
+          </ns2:field_127.100>
+          <ns2:field_127.101>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.101"></xsl:value-of>
+          </ns2:field_127.101>
+          <ns2:field_127.102>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.102"></xsl:value-of>
+          </ns2:field_127.102>
+          <ns2:field_127.103>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.103"></xsl:value-of>
+          </ns2:field_127.103>
+          <ns2:field_127.104>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.104"></xsl:value-of>
+          </ns2:field_127.104>
+          <ns2:field_127.105>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.105"></xsl:value-of>
+          </ns2:field_127.105>
+          <ns2:field_127.106>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.106"></xsl:value-of>
+          </ns2:field_127.106>
+          <ns2:field_127.107>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.107"></xsl:value-of>
+          </ns2:field_127.107>
+          <ns2:field_127.108>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.108"></xsl:value-of>
+          </ns2:field_127.108>
+          <ns2:field_127.109>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.109"></xsl:value-of>
+          </ns2:field_127.109>
+          <ns2:field_127.110>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.110"></xsl:value-of>
+          </ns2:field_127.110>
+          <ns2:field_127.111>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.111"></xsl:value-of>
+          </ns2:field_127.111>
+          <ns2:field_127.112>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.112"></xsl:value-of>
+          </ns2:field_127.112>
+          <ns2:field_127.113>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.113"></xsl:value-of>
+          </ns2:field_127.113>
+          <ns2:field_127.114>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.114"></xsl:value-of>
+          </ns2:field_127.114>
+          <ns2:field_127.115>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.115"></xsl:value-of>
+          </ns2:field_127.115>
+          <ns2:field_127.116>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.116"></xsl:value-of>
+          </ns2:field_127.116>
+          <ns2:field_127.117>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.117"></xsl:value-of>
+          </ns2:field_127.117>
+          <ns2:field_127.118>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.118"></xsl:value-of>
+          </ns2:field_127.118>
+          <ns2:field_127.119>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.119"></xsl:value-of>
+          </ns2:field_127.119>
+          <ns2:field_127.120>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.120"></xsl:value-of>
+          </ns2:field_127.120>
+          <ns2:field_127.121>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.121"></xsl:value-of>
+          </ns2:field_127.121>
+          <ns2:field_127.122>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.122"></xsl:value-of>
+          </ns2:field_127.122>
+          <ns2:field_127.123>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.123"></xsl:value-of>
+          </ns2:field_127.123>
+          <ns2:field_127.124>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.124"></xsl:value-of>
+          </ns2:field_127.124>
+          <ns2:field_127.125>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.125"></xsl:value-of>
+          </ns2:field_127.125>
+          <ns2:field_127.126>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.126"></xsl:value-of>
+          </ns2:field_127.126>
+          <ns2:field_127.127>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.127"></xsl:value-of>
+          </ns2:field_127.127>
+          <ns2:field_127.128>
+            <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_127/ns2:field_127.128"></xsl:value-of>
+          </ns2:field_127.128>
+        </ns2:field_127>
+        <ns2:field_128>
+          <xsl:value-of select="ns2:ISOMessage/ns2:Fields/ns2:field_128"></xsl:value-of>
+        </ns2:field_128>
+        <ns2:TranType>
+          <xsl:variable name="if0">
+            <xsl:choose>
+              <xsl:when test="(string-length($document_OUT_PORT/ns3:SQL_CFG_1/ns3:sel1/ns3:TranType))=('1')">
+                <xsl:value-of select="concat('0',$document_OUT_PORT/ns3:SQL_CFG_1/ns3:sel1/ns3:TranType)"></xsl:value-of>
+              </xsl:when>
+              <xsl:otherwise>
+                <xsl:value-of select="$document_OUT_PORT/ns3:SQL_CFG_1/ns3:sel1/ns3:TranType"></xsl:value-of>
+              </xsl:otherwise>
+            </xsl:choose>
+          </xsl:variable>
+          <xsl:value-of select="$if0"></xsl:value-of>
+        </ns2:TranType>
+        <ns2:SourceNode>
+          <xsl:value-of select="$document_OUT_PORT/ns3:SQL_CFG_1/ns3:sel1/ns3:SourceNode"></xsl:value-of>
+        </ns2:SourceNode>
+        <ns2:SinkNode>
+          <xsl:value-of select="$document_OUT_PORT/ns3:SQL_CFG_1/ns3:sel1/ns3:SinkNode"></xsl:value-of>
+        </ns2:SinkNode>
+        <ns2:DebitAccount>
+          <xsl:value-of select="$document_OUT_PORT/ns3:SQL_CFG_1/ns3:sel1/ns3:Debit_account"></xsl:value-of>
+        </ns2:DebitAccount>
+        <ns2:CreditAccount>
+          <xsl:value-of select="$document_OUT_PORT/ns3:SQL_CFG_1/ns3:sel1/ns3:Credit_Account"></xsl:value-of>
+        </ns2:CreditAccount>
+        <ns2:Version>
+          <xsl:value-of select="$document_OUT_PORT/ns3:SQL_CFG_1/ns3:sel1/ns3:Version"></xsl:value-of>
+        </ns2:Version>
+        <ns2:Inquiry>
+          <xsl:value-of select="$document_OUT_PORT/ns3:SQL_CFG_1/ns3:sel1/ns3:Inquiry"></xsl:value-of>
+        </ns2:Inquiry>
+      </ns2:Fields>
+    </ns2:ISOMessage>
+  </xsl:template>
+</xsl:stylesheet>

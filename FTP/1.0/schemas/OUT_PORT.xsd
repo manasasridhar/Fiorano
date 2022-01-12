@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://www.fiorano.com/fesb/activity/FTPGet1/Response"  xmlns="http://www.fiorano.com/fesb/activity/FTPGet1/Response" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:element name="FTPResponse">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="LocalPath"/>
+                <xsd:element ref="RemoteFile"/>
+                <xsd:element ref="TransferType"/>
+                <xsd:element minOccurs="0" maxOccurs="1" ref="BytesTransferred"/>
+                <xsd:element minOccurs="0" maxOccurs="1" ref="TotalBytes"/>
+                <xsd:element ref="ReplyCode"  minOccurs="0"/>
+                <xsd:element ref="ReplyText"  minOccurs="0"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="LocalPath" type="xsd:string"/>
+    <xsd:element name="RemoteFile" type="xsd:string"/>
+    <xsd:element name="TransferType">
+        <xsd:complexType>
+            <xsd:attribute name="value">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:enumeration value="Ascii"/>
+                        <xsd:enumeration value="Binary"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:attribute>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="BytesTransferred" type="xsd:string"/>
+    <xsd:element name="TotalBytes" type="xsd:string"/>
+    <xsd:element name="ReplyCode" type="xsd:string"/>
+    <xsd:element name="ReplyText" type="xsd:string"/>
+</xsd:schema>

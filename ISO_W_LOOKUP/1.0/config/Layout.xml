@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="ASCII"?>
+<layout>
+  <subflow name="FIORANO.ESTUDIO.ROOT_FLOW" x="0" y="0">
+    <service-instance name="Listen4ISORequest1" x="307" y="74"/>
+    <service-instance name="ISO2XML1" x="490" y="97"/>
+    <service-instance name="lookup" x="684" y="96"/>
+    <service-instance name="Inquiry" x="965" y="72"/>
+    <service-instance name="OFSConverter2" x="1144" y="73"/>
+    <service-instance name="XML2ISO1" x="1298" y="94"/>
+    <service-instance name="validate2" x="949" y="240"/>
+    <service-instance name="XML2ISO2" x="1230" y="222"/>
+    <service-instance name="process2" x="1090" y="245"/>
+    <service-instance name="OFSConverter4" x="863" y="349"/>
+    <service-instance name="GetDebitCCY" x="563" y="281"/>
+    <service-instance name="OFSConverter1" x="720" y="378"/>
+    <service-instance name="GetExchRate" x="815" y="423"/>
+    <service-instance name="OFSConverter3" x="955" y="456"/>
+    <service-instance name="SelTermDtls" x="619" y="421"/>
+    <service-instance name="RaiseAlert" x="1325" y="345"/>
+  </subflow>
+  <shortcut-routes/>
+</layout>

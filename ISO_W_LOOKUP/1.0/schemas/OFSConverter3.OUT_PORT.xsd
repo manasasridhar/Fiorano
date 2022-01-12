@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="">
+   <xsd:element name="Root">
+      <xsd:complexType>
+         <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" name="Record">
+               <xsd:complexType>
+                  <xsd:sequence>
+                     <xsd:element name="Currency_Code" type="xsd:string"/>
+                     <xsd:element name="Buy_Rate" type="xsd:string"/>
+                     <xsd:element name="Sell_Rate" type="xsd:string"/>
+                  </xsd:sequence>
+               </xsd:complexType>
+            </xsd:element>
+         </xsd:sequence>
+      </xsd:complexType>
+   </xsd:element>
+</xsd:schema>

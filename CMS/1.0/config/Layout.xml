@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ASCII"?>
+<layout>
+  <subflow name="FIORANO.ESTUDIO.ROOT_FLOW" x="0" y="0">
+    <service-instance name="ReceiveISO" x="92" y="238"/>
+    <service-instance name="ISO2XML" x="208" y="249"/>
+    <service-instance name="PosISO2C24ISO" x="352" y="233"/>
+    <service-instance name="Send2C24" x="491" y="231"/>
+    <service-instance name="XML2ISO" x="758" y="223"/>
+    <service-instance name="C24ISO2XML" x="607" y="222"/>
+  </subflow>
+  <shortcut-routes/>
+</layout>

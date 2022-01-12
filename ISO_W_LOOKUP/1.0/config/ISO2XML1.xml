@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<java version="1.8.0_121" class="java.beans.XMLDecoder"> 
+ <object class="com.fiorano.edbc.isomessageconverter.model.ISOMessageConverterPM"> 
+  <void property="byteMode"> 
+   <boolean>true</boolean> 
+  </void> 
+  <void property="configFilePath"> 
+   <string>/home/esbadmin/Fiorano/PostilConfig_127.xml</string> 
+  </void> 
+  <void property="configuredVersion"> 
+   <int>1200</int> 
+  </void> 
+  <void property="errorHandlingConfiguration"> 
+   <void property="errorActionsMap"> 
+    <void method="get"> 
+     <object class="com.fiorano.edbc.framework.service.exception.ServiceErrorID" method="getServiceErrorId"> 
+      <int>3</int> 
+     </object> 
+     <void method="clear"/> 
+     <void method="add"> 
+      <object class="com.fiorano.edbc.framework.service.exception.ErrorHandlingAction"> 
+       <void property="enabled"> 
+        <boolean>true</boolean> 
+       </void> 
+      </object> 
+     </void> 
+     <void method="add"> 
+      <object class="com.fiorano.edbc.framework.service.exception.ErrorHandlingAction"> 
+       <void property="enabled"> 
+        <boolean>true</boolean> 
+       </void> 
+       <void property="id"> 
+        <int>5</int> 
+       </void> 
+      </object> 
+     </void> 
+    </void> 
+    <void method="get"> 
+     <object class="com.fiorano.edbc.framework.service.exception.ServiceErrorID" method="getServiceErrorId"> 
+      <int>2</int> 
+     </object> 
+     <void method="clear"/> 
+     <void method="add"> 
+      <object class="com.fiorano.edbc.framework.service.exception.ErrorHandlingAction"> 
+       <void property="enabled"> 
+        <boolean>true</boolean> 
+       </void> 
+      </object> 
+     </void> 
+     <void method="add"> 
+      <object class="com.fiorano.edbc.framework.service.exception.ErrorHandlingAction"> 
+       <void property="enabled"> 
+        <boolean>true</boolean> 
+       </void> 
+       <void property="id"> 
+        <int>1</int> 
+       </void> 
+      </object> 
+     </void> 
+    </void> 
+    <void method="get"> 
+     <object class="com.fiorano.edbc.framework.service.exception.ServiceErrorID" method="getServiceErrorId"> 
+      <int>1</int> 
+     </object> 
+     <void method="clear"/> 
+     <void method="add"> 
+      <object class="com.fiorano.edbc.framework.service.exception.ErrorHandlingAction"> 
+       <void property="enabled"> 
+        <boolean>true</boolean> 
+       </void> 
+      </object> 
+     </void> 
+     <void method="add"> 
+      <object class="com.fiorano.edbc.framework.service.exception.RetryAction"> 
+       <void property="configuration"> 
+        <object class="com.fiorano.edbc.framework.service.exception.RetryConfiguration"> 
+         <void property="otherActions"> 
+          <void method="put"> 
+           <object class="com.fiorano.edbc.framework.service.exception.ErrorHandlingAction"> 
+            <void property="id"> 
+             <int>1</int> 
+            </void> 
+           </object> 
+           <int>1</int> 
+          </void> 
+          <void method="put"> 
+           <object class="com.fiorano.edbc.framework.service.exception.ErrorHandlingAction"/> 
+           <int>1</int> 
+          </void> 
+         </void> 
+        </object> 
+       </void> 
+       <void property="id"> 
+        <int>2</int> 
+       </void> 
+      </object> 
+     </void> 
+     <void method="add"> 
+      <object class="com.fiorano.edbc.framework.service.exception.ErrorHandlingAction"> 
+       <void property="enabled"> 
+        <boolean>true</boolean> 
+       </void> 
+       <void property="id"> 
+        <int>1</int> 
+       </void> 
+      </object> 
+     </void> 
+     <void method="add"> 
+      <object class="com.fiorano.edbc.framework.service.exception.ErrorHandlingAction"> 
+       <void property="id"> 
+        <int>5</int> 
+       </void> 
+      </object> 
+     </void> 
+     <void method="add"> 
+      <object class="com.fiorano.edbc.framework.service.exception.ErrorHandlingAction"> 
+       <void property="id"> 
+        <int>4</int> 
+       </void> 
+      </object> 
+     </void> 
+    </void> 
+    <void method="get"> 
+     <object class="com.fiorano.edbc.framework.service.exception.ServiceErrorID" method="getServiceErrorId"> 
+      <int>0</int> 
+     </object> 
+     <void method="clear"/> 
+     <void method="add"> 
+      <object class="com.fiorano.edbc.framework.service.exception.ErrorHandlingAction"> 
+       <void property="enabled"> 
+        <boolean>true</boolean> 
+       </void> 
+      </object> 
+     </void> 
+     <void method="add"> 
+      <object class="com.fiorano.edbc.framework.service.exception.ErrorHandlingAction"> 
+       <void property="id"> 
+        <int>6</int> 
+       </void> 
+      </object> 
+     </void> 
+     <void method="add"> 
+      <object class="com.fiorano.edbc.framework.service.exception.ErrorHandlingAction"> 
+       <void property="enabled"> 
+        <boolean>true</boolean> 
+       </void> 
+       <void property="id"> 
+        <int>1</int> 
+       </void> 
+      </object> 
+     </void> 
+     <void method="add"> 
+      <object class="com.fiorano.edbc.framework.service.exception.ErrorHandlingAction"> 
+       <void property="id"> 
+        <int>5</int> 
+       </void> 
+      </object> 
+     </void> 
+    </void> 
+   </void> 
+  </void> 
+  <void property="header"> 
+   <string></string> 
+  </void> 
+  <void property="lengthIncluded"> 
+   <boolean>true</boolean> 
+  </void> 
+  <void property="lengthType"> 
+   <string>Bytes</string> 
+  </void> 
+  <void property="schema"> 
+   <object class="fiorano.esb.record.ESBRecordDefinition"> 
+    <void property="rootElementName"> 
+     <string>ISOMessage</string> 
+    </void> 
+    <void property="structure"> 
+     <string>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;xsd:schema xmlns:fns=&quot;http://www.fiorano.com/fesb/activity/ISOMessage&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; elementFormDefault=&quot;qualified&quot; targetNamespace=&quot;http://www.fiorano.com/fesb/activity/ISOMessage&quot;&gt;
+   &lt;xsd:element name=&quot;ISOMessage&quot;&gt;
+      &lt;xsd:complexType&gt;
+         &lt;xsd:sequence&gt;
+            &lt;xsd:element name=&quot;MTI&quot; type=&quot;xsd:string&quot;/&gt;
+            &lt;xsd:element name=&quot;Fields&quot;&gt;
+               &lt;xsd:complexType&gt;
+                  &lt;xsd:sequence&gt;
+                     &lt;xsd:element name=&quot;field_1&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_2&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_3&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_4&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_5&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_6&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_7&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_8&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_9&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_10&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_11&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_12&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_13&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_14&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_15&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_16&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_17&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_18&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_19&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_20&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_21&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_22&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_23&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_24&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_25&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_26&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_27&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_28&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_29&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_30&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_31&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_32&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_33&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_34&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_35&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_36&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_37&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_38&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_39&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_40&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_41&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_42&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_43&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_44&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_45&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_46&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_47&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_48&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_49&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_50&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_51&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_52&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_53&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_54&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_55&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_56&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_57&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_58&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_59&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_60&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_61&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_62&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_63&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_64&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_65&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_66&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_67&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_68&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_69&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_70&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_71&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_72&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_73&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_74&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_75&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_76&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_77&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_78&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_79&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_80&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_81&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_82&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_83&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_84&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_85&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_86&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_87&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_88&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_89&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_90&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_91&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_92&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_93&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_94&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_95&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_96&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_97&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_98&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_99&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_100&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_101&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_102&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_103&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_104&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_105&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_106&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_107&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_108&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_109&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_110&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_111&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_112&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_113&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_114&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_115&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_116&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_117&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_118&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_119&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_120&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_121&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_122&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_123&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_124&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_125&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_126&quot; type=&quot;xsd:string&quot;/&gt;
+                     &lt;xsd:element name=&quot;field_127&quot;&gt;
+                        &lt;xsd:complexType&gt;
+                           &lt;xsd:sequence&gt;
+                              &lt;xsd:element name=&quot;field_127.1&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.2&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.3&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.4&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.5&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.6&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.7&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.8&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.9&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.10&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.11&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.12&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.13&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.14&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.15&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.16&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.17&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.18&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.19&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.20&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.21&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.22&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.23&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.24&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.25&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.26&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.27&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.28&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.29&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.30&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.31&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.32&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.33&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.34&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.35&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.36&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.37&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.38&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.39&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.40&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.41&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.42&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.43&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.44&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.45&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.46&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.47&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.48&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.49&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.50&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.51&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.52&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.53&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.54&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.55&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.56&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.57&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.58&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.59&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.60&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.61&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.62&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.63&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.64&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.65&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.66&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.67&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.68&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.69&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.70&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.71&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.72&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.73&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.74&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.75&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.76&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.77&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.78&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.79&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.80&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.81&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.82&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.83&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.84&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.85&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.86&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.87&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.88&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.89&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.90&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.91&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.92&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.93&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.94&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.95&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.96&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.97&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.98&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.99&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.100&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.101&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.102&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.103&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.104&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.105&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.106&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.107&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.108&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.109&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.110&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.111&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.112&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.113&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.114&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.115&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.116&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.117&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.118&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.119&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.120&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.121&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.122&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.123&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.124&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.125&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.126&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.127&quot; type=&quot;xsd:string&quot;/&gt;
+                              &lt;xsd:element name=&quot;field_127.128&quot; type=&quot;xsd:string&quot;/&gt;
+                           &lt;/xsd:sequence&gt;
+                        &lt;/xsd:complexType&gt;
+                     &lt;/xsd:element&gt;
+                     &lt;xsd:element name=&quot;field_128&quot; type=&quot;xsd:string&quot;/&gt;
+                  &lt;/xsd:sequence&gt;
+               &lt;/xsd:complexType&gt;
+            &lt;/xsd:element&gt;
+         &lt;/xsd:sequence&gt;
+      &lt;/xsd:complexType&gt;
+   &lt;/xsd:element&gt;
+&lt;/xsd:schema&gt;</string> 
+    </void> 
+    <void property="targetNamespace"> 
+     <string>http://www.fiorano.com/fesb/activity/ISOMessage</string> 
+    </void> 
+   </object> 
+  </void> 
+ </object> 
+</java> 

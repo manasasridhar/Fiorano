@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0" xmlns:xalan="http://xml.apache.org/xslt" xmlns:datetime="http://exslt.org/dates-and-times" xmlns:math="http://exslt.org/math" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:lxslt="http://xml.apache.org/xslt" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:java="http://xml.apache.org/xslt/java" xmlns:set="http://exslt.org/sets" exclude-result-prefixes="xalan java lxslt" xmlns:ns5="http://www.w3.org/2001/XMLSchema" xmlns:ns2="http://www.fiorano.com/fesb/activity/SMTP1/smtp/in" xmlns:ns1="http://www.fiorano.com/fesb/activity/ISOMessage" xmlns:ns3="http://www.fiorano.com/fesb/activity/DB1/Response" xmlns:dateConversion="dateConversion" xmlns:getFTID="getFTID" xmlns:myext="myext" xmlns:strings="strings" extension-element-prefixes="datetime set math dateConversion getFTID myext strings">
+  <xsl:import href="GLOBAL_FUNCLET_PATH"></xsl:import>
+  <xsl:output method="xml" indent="yes" encoding="UTF-8" xalan:indent-amount="2" omit-xml-declaration="no"></xsl:output>
+  <xsl:variable name="document" select="/"></xsl:variable>
+  <xsl:variable name="document_OUT_PORT" select="document('OUT_PORT')"></xsl:variable>
+  <xsl:template match="/">
+    <ns2:Email>
+      <To>
+        <xsl:value-of select="'gpuoza@calbank.net'"></xsl:value-of>
+      </To>
+      <Subject>
+        <xsl:value-of select="'Timeout - T24'"></xsl:value-of>
+      </Subject>
+      <Body>
+        <TextBody>
+          <xsl:value-of select="'Alert :&#xd;&#xa;&#xd;&#xa;No Look up Informatin is presentin te table for following Source ans Sink Node.&#xd;&#xa;&#xd;&#xa;Following are the details :'"></xsl:value-of>
+          <xsl:value-of select="concat('SourceNode :: ',normalize-space(substring(ns1:ISOMessage/ns1:Fields/ns1:field_127/ns1:field_127.3,'1','12')),'&#xd;&#xa;SinkNode ::  ',normalize-space(substring(ns1:ISOMessage/ns1:Fields/ns1:field_127/ns1:field_127.3,'13','12')))"></xsl:value-of>
+        </TextBody>
+      </Body>
+    </ns2:Email>
+  </xsl:template>
+</xsl:stylesheet>

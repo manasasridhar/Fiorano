@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0" xmlns:xalan="http://xml.apache.org/xslt" xmlns:datetime="http://exslt.org/dates-and-times" xmlns:math="http://exslt.org/math" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:lxslt="http://xml.apache.org/xslt" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:java="http://xml.apache.org/xslt/java" xmlns:set="http://exslt.org/sets" exclude-result-prefixes="xalan java lxslt" xmlns:ns4="http://services.tafj.temenos.com/xsd" xmlns:ns5="http://www.w3.org/2001/XMLSchema" xmlns:ns2="http://services.tafj.temenos.com/Invoke/Input" xmlns:ns1="http://www.fiorano.com/fesb/activity/ISOMessage" xmlns:ns3="http://www.fiorano.com/fesb/activity/DB1/Response" xmlns:dateConversion="dateConversion" xmlns:getFTID="getFTID" xmlns:myext="myext" xmlns:strings="strings" extension-element-prefixes="datetime set math dateConversion getFTID myext strings">
+  <xsl:import href="GLOBAL_FUNCLET_PATH"></xsl:import>
+  <xsl:output method="xml" indent="yes" encoding="UTF-8" xalan:indent-amount="2" omit-xml-declaration="no"></xsl:output>
+  <xsl:variable name="document" select="/"></xsl:variable>
+  <xsl:variable name="document_OUT_PORT" select="document('OUT_PORT')"></xsl:variable>
+  <xsl:template match="/">
+    <ns2:Envelope>
+      <ns2:Body>
+        <ns4:Invoke>
+          <ns4:Request>
+            <xsl:variable name="if0">
+              <xsl:choose>
+                <xsl:when test="(ns1:ISOMessage/ns1:Fields/ns1:field_102)!=('')">
+                  <xsl:value-of select="ns1:ISOMessage/ns1:Fields/ns1:field_102"></xsl:value-of>
+                </xsl:when>
+                <xsl:otherwise>
+                  <xsl:value-of select="ns1:ISOMessage/ns1:Fields/ns1:DebitAccount"></xsl:value-of>
+                </xsl:otherwise>
+              </xsl:choose>
+            </xsl:variable>
+            <xsl:variable name="if1">
+              <xsl:choose>
+                <xsl:when test="(ns1:ISOMessage/ns1:Fields/ns1:field_103)!=('')">
+                  <xsl:value-of select="ns1:ISOMessage/ns1:Fields/ns1:field_103"></xsl:value-of>
+                </xsl:when>
+                <xsl:otherwise>
+                  <xsl:value-of select="$document_OUT_PORT/ns3:SQL_CFG_1/ns3:SelTerminalDtls/ns3:CreditAccount"></xsl:value-of>
+                </xsl:otherwise>
+              </xsl:choose>
+            </xsl:variable>
+            <xsl:value-of select="concat('ENQUIRY.SELECT,,ATM.USER/EAea30@1/GH0010001,E.CAL.FR.ACCT,FIRST.ACCT:EQ=',$if0,',SECOND.ACCT:EQ=',$if1)"></xsl:value-of>
+          </ns4:Request>
+        </ns4:Invoke>
+      </ns2:Body>
+    </ns2:Envelope>
+  </xsl:template>
+</xsl:stylesheet>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="">
+   <xsd:element name="Response">
+      <xsd:complexType>
+         <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" name="Record">
+               <xsd:complexType>
+                  <xsd:sequence>
+                     <xsd:element name="Account_Number" type="xsd:string"/>
+                     <xsd:element name="Available_Balance" type="xsd:string"/>
+                     <xsd:element name="Ledger_Balance" type="xsd:string"/>
+                     <xsd:element name="Account_Name" type="xsd:string"/>
+                     <xsd:element name="Customer_No" type="xsd:string"/>
+                     <xsd:element name="Branch" type="xsd:string"/>
+                     <xsd:element name="Currency" type="xsd:string"/>
+                     <xsd:element name="Account_Type" type="xsd:string"/>
+                  </xsd:sequence>
+               </xsd:complexType>
+            </xsd:element>
+         </xsd:sequence>
+      </xsd:complexType>
+   </xsd:element>
+</xsd:schema>

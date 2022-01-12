@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.fiorano.com/fesb/activity/SocketAdapter/status"
+            xmlns="http://www.fiorano.com/fesb/activity/SocketAdapter/status"  elementFormDefault="qualified" >
+	<xsd:element name="Result" type="xsd:string"/>
+	<xsd:element name="SocketAdapter">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="Result"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>
