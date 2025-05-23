@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mappermodel:MapperProject xmlns:mappermodel="http://www.fiorano.com/tools/mapper/mappermodel" convertor="nameIndexed" suppressEmptyItems="false" suppressPattern="" version="3.0.2">
+  <mappermodel:XSLTVersion>2.0</mappermodel:XSLTVersion>
+  <mappermodel:XSLTEngine>org.apache.xalan.processor.TransformerFactoryImpl</mappermodel:XSLTEngine>
+  <mappermodel:XSLTEncoding>UTF-8</mappermodel:XSLTEncoding>
+  <mappermodel:OutputMethod>text</mappermodel:OutputMethod>
+  <mappermodel:OutputEncoding>UTF-8</mappermodel:OutputEncoding>
+  <mappermodel:indent>true</mappermodel:indent>
+  <mappermodel:setDTD>false</mappermodel:setDTD>
+  <mappermodel:omit-xml-declaration>false</mappermodel:omit-xml-declaration>
+  <mappermodel:createEmptyOutputTags>false</mappermodel:createEmptyOutputTags>
+  <mappermodel:copyUnmappedFromInput enabled="false"/>
+  <mappermodel:disableOutputEscapingForANY>false</mappermodel:disableOutputEscapingForANY>
+  <mappermodel:Comments>Key in relevant comments</mappermodel:Comments>
+  <mappermodel:excludeResultPrefixes></mappermodel:excludeResultPrefixes>
+  <mappermodel:addDefaultXSTypeAttributes>false</mappermodel:addDefaultXSTypeAttributes>
+  <mappermodel:InputStructure>
+    <mappermodel:Structure duplicates="" filePath="applicationContextSchema.xsd" mime="XSD" name="Application-Context" rootName="Context"/>
+  </mappermodel:InputStructure>
+  <mappermodel:OutputStructure>
+    <mappermodel:Structure duplicates="" filePath="Output1.DTD" mime="XSD" name="Output1" rootName="Records"/>
+  </mappermodel:OutputStructure>
+  <mappermodel:Namespaces/>
+  <mappermodel:Mappings>
+    <mappermodel:GraphModel inputPins="1,2" outputNode="Output1:0,Records:0,[ONE MANY]:0,Record:0" x="-1" y="-1">
+      <mappermodel:FunctionGraphNode label="myext:splitBulkMXFile(inputString)" type="69" x="198" y="160">
+        <mappermodel:InputPins>inputString</mappermodel:InputPins>
+        <mappermodel:OutputPins>R</mappermodel:OutputPins>
+        <mappermodel:Properties/>
+      </mappermodel:FunctionGraphNode>
+      <mappermodel:FunctionGraphNode label="getText" type="154" x="88" y="91">
+        <mappermodel:InputPins></mappermodel:InputPins>
+        <mappermodel:OutputPins>R</mappermodel:OutputPins>
+        <mappermodel:Properties/>
+      </mappermodel:FunctionGraphNode>
+      <mappermodel:Link inputID="0" inputIndex="0" outputID="1" outputIndex="0"/>
+      <mappermodel:Link inputID="1" inputIndex="0" outputID="2" outputIndex="0"/>
+    </mappermodel:GraphModel>
+  </mappermodel:Mappings>
+  <mappermodel:Extensions>
+    <mappermodel:Extension language="javascript" name="myext">
+      <mappermodel:Script>function compute(expr){
+	return eval(expr);
+}
+
+function nextMillenium(){
+	d = new Date()    //today's date
+	mill=new Date(3000, 00, 01, 00, 00, 00)    //Next millennium start date
+	diff = mill-d    //difference in milliseconds
+	mtg = new String(diff/86400000)    //calculate days and convert to string
+	point=mtg.indexOf(&quot;.&quot;)    //find the decimal point
+	days=mtg.substring(0,point)    //get just the whole days
+	return &quot;There are only &quot; + days + &quot; days remaining to the start of the next millennium.&quot;; 
+}
+
+
+function formatNumber(num) {
+ return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, &quot;,&quot;);
+}
+
+function replace(input, pattern, flags, str){
+	return input.replace(new RegExp(pattern, flags), str);
+}
+
+function splitBulkMTFile(fileContent) {
+ 
+    const regex = /(\{1:[^}]*\})(\{2:[^}]*\})(\{3:[^}]*\})(\{4:[^}]*\})(?=\{1:|\z)/g;
+
+    const messages = [];
+    var match;
+    while ((match = regex.exec(fileContent)) !== null) {
+      
+        messages.push(match[0].trim());
+    }
+
+    return messages;
+}
+
+
+function splitBulkMXFile(inputString) {
+ 
+   var splitArray =inputString.split('&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?>');
+result='';
+var i = 0;
+   for ( i = 1 ; i &lt; splitArray.length; i++) {
+			result = result+'&lt;Record>'+ splitArray[i]+'&lt;/Record>';
+			
+
+	}
+
+    return '&lt;Records>'+result+'&lt;/Records>';
+}</mappermodel:Script>
+      <mappermodel:Function name="splitBulkMXFile" return="String">
+        <mappermodel:Argument datatype="String" name="inputString"/>
+      </mappermodel:Function>
+    </mappermodel:Extension>
+  </mappermodel:Extensions>
+  <mappermodel:UserXSL index="1" node="Output1:0,Records:0">--> &#xD;
+&lt;xsl:value-of select=&quot;myext:splitBulkMXFile(string(java:_getText($_TIF_MESSAGE_)))&quot;>&lt;/xsl:value-of>&#xD;
+&#xD;
+&lt;!--</mappermodel:UserXSL>
+  <mappermodel:UserXSL index="3" node="Output1:0,Records:0">--></mappermodel:UserXSL>
+  <mappermodel:UserXSL index="0" node="Output1:0,Records:0">&lt;!--</mappermodel:UserXSL>
+</mappermodel:MapperProject>

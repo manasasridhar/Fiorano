@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="2.0" xmlns:xalan="http://xml.apache.org/xslt" xmlns:datetime="http://exslt.org/dates-and-times" xmlns:math="http://exslt.org/math" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:lxslt="http://xml.apache.org/xslt" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:java="http://xml.apache.org/xslt/java" xmlns:set="http://exslt.org/sets" exclude-result-prefixes="xalan java lxslt" xmlns:ns2="http://www.w3.org/2001/XMLSchema" xmlns:DecimaltoHex="DecimaltoHex" xmlns:EncryptDataWithPublicKey="http://xml.apache.org/xslt/java" xmlns:HMAC2="http://xml.apache.org/xslt/java" xmlns:Headerval="http://xml.apache.org/xslt/java" xmlns:Java="http://xml.apache.org/xslt/java" xmlns:JsonParser2="JsonParser2" xmlns:LAUUtil="http://xml.apache.org/xslt/java" xmlns:MT2MX="http://xml.apache.org/xslt/java" xmlns:MTtoMX="http://xml.apache.org/xslt/java" xmlns:MTtoMXUtil="http://xml.apache.org/xslt/java" xmlns:MX2MT="http://xml.apache.org/xslt/java" xmlns:QueryGenerator="QueryGenerator" xmlns:SHA256="http://xml.apache.org/xslt/java" xmlns:dateConversion="dateConversion" xmlns:myext="myext" xmlns:nestedJsonParser="nestedJsonParser" xmlns:removeFixedLengthV3="removeFixedLengthV3" xmlns:strings="strings" xmlns:test="test" xmlns:util="util" extension-element-prefixes="datetime set math DecimaltoHex EncryptDataWithPublicKey HMAC2 Headerval Java JsonParser2 LAUUtil MT2MX MTtoMX MTtoMXUtil MX2MT QueryGenerator SHA256 dateConversion myext nestedJsonParser removeFixedLengthV3 strings test util">
+  <xsl:import href="GLOBAL_FUNCLET_PATH"></xsl:import>
+  <xsl:output method="text" indent="yes" encoding="UTF-8" xalan:indent-amount="2" omit-xml-declaration="no"></xsl:output>
+  <xsl:variable name="document" select="/"></xsl:variable>
+  <xsl:template match="/"><!--
+    <Records>--> 
+<xsl:value-of select="myext:splitBulkMXFile(string(java:_getText($_TIF_MESSAGE_)))"></xsl:value-of>
+
+<!--
+      <Record>
+        <xsl:value-of select="myext:splitBulkMXFile(string(java:_getText($_TIF_MESSAGE_)))"></xsl:value-of>
+      </Record>
+    </Records>--></xsl:template>
+<!--The list of parameters defined by user-->
+  <xsl:param name="_TIF_MESSAGE_"></xsl:param>
+<!--The list of Extensions defined by user-->
+  <lxslt:component prefix="myext" functions="replace splitBulkMXFile">
+    <lxslt:script lang="javascript"><![CDATA[function compute(expr){
+	return eval(expr);
+}
+
+function nextMillenium(){
+	d = new Date()    //today's date
+	mill=new Date(3000, 00, 01, 00, 00, 00)    //Next millennium start date
+	diff = mill-d    //difference in milliseconds
+	mtg = new String(diff/86400000)    //calculate days and convert to string
+	point=mtg.indexOf(".")    //find the decimal point
+	days=mtg.substring(0,point)    //get just the whole days
+	return "There are only " + days + " days remaining to the start of the next millennium."; 
+}
+
+
+function formatNumber(num) {
+ return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
+function replace(input, pattern, flags, str){
+	return input.replace(new RegExp(pattern, flags), str);
+}
+
+function splitBulkMTFile(fileContent) {
+ 
+    const regex = /(\{1:[^}]*\})(\{2:[^}]*\})(\{3:[^}]*\})(\{4:[^}]*\})(?=\{1:|\z)/g;
+
+    const messages = [];
+    var match;
+    while ((match = regex.exec(fileContent)) !== null) {
+      
+        messages.push(match[0].trim());
+    }
+
+    return messages;
+}
+
+
+function splitBulkMXFile(inputString) {
+ 
+   var splitArray =inputString.split('<?xml version="1.0" encoding="UTF-8" ?>');
+result='';
+var i = 0;
+   for ( i = 1 ; i < splitArray.length; i++) {
+			result = result+'<Record>'+ splitArray[i]+'</Record>';
+			
+
+	}
+
+    return '<Records>'+result+'</Records>';
+}]]></lxslt:script>
+  </lxslt:component>
+</xsl:stylesheet>

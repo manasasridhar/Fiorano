@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<java version="1.8.0_371" class="java.beans.XMLDecoder"> 
+ <object class="com.fiorano.bc.feeder.model.FeederPM"> 
+  <void property="attachment"> 
+   <object class="java.util.LinkedHashMap"/> 
+  </void> 
+  <void property="configuredVersion"> 
+   <int>1300</int> 
+  </void> 
+  <void property="defaultMessage"> 
+   <string>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;&#13;
+&lt;Saa:DataPDU xmlns:Saa=&quot;urn:swift:saa:xsd:saa.2.0&quot; xmlns:Sw=&quot;urn:swift:snl:ns.Sw&quot; xmlns:SwInt=&quot;urn:swift:snl:ns.SwInt&quot; xmlns:SwGbl=&quot;urn:swift:snl:ns.SwGbl&quot; xmlns:SwSec=&quot;urn:swift:snl:ns.SwSec&quot;&gt;    &lt;Saa:Revision&gt;2.0.13&lt;/Saa:Revision&gt;    &lt;Saa:Header&gt;        &lt;Saa:TransmissionReport&gt;            &lt;Saa:SenderReference&gt;ISPXAIDJAXXXP004.231010211611089&lt;/Saa:SenderReference&gt;            &lt;Saa:ReconciliationInfo&gt;swi00001-2023-10-10T14:25:14.7518.022508Z&lt;/Saa:ReconciliationInfo&gt;            &lt;Saa:NetworkDeliveryStatus&gt;NetworkAcked&lt;/Saa:NetworkDeliveryStatus&gt;            &lt;Saa:OriginalInstanceAddressee&gt;                &lt;Saa:X1&gt;PINBIDJAXXX&lt;/Saa:X1&gt;                &lt;Saa:X2&gt;xxx&lt;/Saa:X2&gt;            &lt;/Saa:OriginalInstanceAddressee&gt;            &lt;Saa:ReportingApplication&gt;SWIFTNetInterface&lt;/Saa:ReportingApplication&gt;            &lt;Saa:NetworkInfo&gt;                &lt;Saa:Priority&gt;Normal&lt;/Saa:Priority&gt;                &lt;Saa:IsPossibleDuplicate&gt;false&lt;/Saa:IsPossibleDuplicate&gt;                &lt;Saa:Service&gt;swift.finplus!pf&lt;/Saa:Service&gt;                &lt;Saa:Network&gt;SWIFTNet&lt;/Saa:Network&gt;                &lt;Saa:SessionNr&gt;000026&lt;/Saa:SessionNr&gt;                &lt;Saa:SeqNr&gt;000000005&lt;/Saa:SeqNr&gt;                &lt;Saa:SWIFTNetNetworkInfo&gt;                    &lt;Saa:RequestType&gt;pacs.004.001.09&lt;/Saa:RequestType&gt;                    &lt;Saa:RequestSubtype&gt;swift.cbprplus.02&lt;/Saa:RequestSubtype&gt;                    &lt;Saa:SWIFTRef&gt;swi00001-2023-10-10T14:25:14.7518.022508Z&lt;/Saa:SWIFTRef&gt;                    &lt;Saa:SNLRef&gt;SNL36646-2023-10-10T14:26:08.13624.000302Z&lt;/Saa:SNLRef&gt;                    &lt;Saa:Reference&gt;83e8c537-86a0-49cc-99b1-5b12874a647c&lt;/Saa:Reference&gt;                    &lt;Saa:SnFInputTime&gt;0301:2023-10-10T14:25:14&lt;/Saa:SnFInputTime&gt;                    &lt;Saa:ResponsePayloadAttributes&gt;                        &lt;Saa:PayloadAttribute&gt;                            &lt;Saa:Name&gt;type&lt;/Saa:Name&gt;                            &lt;Saa:Value&gt;swift.emptyresponse&lt;/Saa:Value&gt;                        &lt;/Saa:PayloadAttribute&gt;                    &lt;/Saa:ResponsePayloadAttributes&gt;                &lt;/Saa:SWIFTNetNetworkInfo&gt;            &lt;/Saa:NetworkInfo&gt;        &lt;/Saa:TransmissionReport&gt;    &lt;/Saa:Header&gt;    &lt;Saa:Body&gt;        &lt;AppHdr xmlns=&quot;urn:iso:std:iso:20022:tech:xsd:head.001.001.02&quot;&gt;            &lt;Fr&gt;                &lt;FIId&gt;                    &lt;FinInstnId&gt;                        &lt;BICFI&gt;SPXAIDJAXXX&lt;/BICFI&gt;                    &lt;/FinInstnId&gt;                &lt;/FIId&gt;            &lt;/Fr&gt;            &lt;To&gt;                &lt;FIId&gt;                    &lt;FinInstnId&gt;                        &lt;BICFI&gt;PINBIDJAXXX&lt;/BICFI&gt;                    &lt;/FinInstnId&gt;                &lt;/FIId&gt;            &lt;/To&gt;            &lt;BizMsgIdr&gt;RTR231010SPXA098&lt;/BizMsgIdr&gt;            &lt;MsgDefIdr&gt;pacs.004.001.09&lt;/MsgDefIdr&gt;            &lt;BizSvc&gt;swift.cbprplus.02&lt;/BizSvc&gt;            &lt;CreDt&gt;2023-10-10T21:13:53+07:00&lt;/CreDt&gt;            &lt;Rltd&gt;                &lt;Fr&gt;                    &lt;FIId&gt;                        &lt;FinInstnId&gt;                            &lt;BICFI&gt;PINBIDJAXXX&lt;/BICFI&gt;                        &lt;/FinInstnId&gt;                    &lt;/FIId&gt;                &lt;/Fr&gt;                &lt;To&gt;                    &lt;FIId&gt;                        &lt;FinInstnId&gt;                            &lt;BICFI&gt;SPXAIDJAXXX&lt;/BICFI&gt;                        &lt;/FinInstnId&gt;                    &lt;/FIId&gt;                &lt;/To&gt;                &lt;BizMsgIdr&gt;03TG23070493739A&lt;/BizMsgIdr&gt;                &lt;MsgDefIdr&gt;pacs.008.001.08&lt;/MsgDefIdr&gt;                &lt;BizSvc&gt;swift.cbprplus.02&lt;/BizSvc&gt;                &lt;CreDt&gt;2023-09-25T05:49:17+00:00&lt;/CreDt&gt;            &lt;/Rltd&gt;        &lt;/AppHdr&gt;        &lt;Document xmlns=&quot;urn:iso:std:iso:20022:tech:xsd:pacs.004.001.09&quot;&gt;            &lt;PmtRtr&gt;                &lt;GrpHdr&gt;                    &lt;MsgId&gt;RTR231010SPXA098&lt;/MsgId&gt;                    &lt;CreDtTm&gt;2023-10-10T21:13:53+07:00&lt;/CreDtTm&gt;                    &lt;NbOfTxs&gt;1&lt;/NbOfTxs&gt;                    &lt;SttlmInf&gt;                        &lt;SttlmMtd&gt;INGA&lt;/SttlmMtd&gt;                    &lt;/SttlmInf&gt;                &lt;/GrpHdr&gt;                &lt;TxInf&gt;                    &lt;RtrId&gt;RTR231010SPXA098&lt;/RtrId&gt;                    &lt;OrgnlGrpInf&gt;                        &lt;OrgnlMsgId&gt;03TG23070493739A&lt;/OrgnlMsgId&gt;                        &lt;OrgnlMsgNmId&gt;pacs.008.001.08&lt;/OrgnlMsgNmId&gt;                        &lt;OrgnlCreDtTm&gt;2023-09-25T05:49:17+00:00&lt;/OrgnlCreDtTm&gt;                    &lt;/OrgnlGrpInf&gt;                    &lt;OrgnlInstrId&gt;03TG23070493739A&lt;/OrgnlInstrId&gt;                    &lt;OrgnlEndToEndId&gt;9729051&lt;/OrgnlEndToEndId&gt;                    &lt;OrgnlTxId&gt;230704009462&lt;/OrgnlTxId&gt;                    &lt;OrgnlUETR&gt;6efd833d-e997-459d-82fa-7b4ad764171e&lt;/OrgnlUETR&gt;                    &lt;OrgnlIntrBkSttlmAmt Ccy=&quot;EUR&quot;&gt;196.8&lt;/OrgnlIntrBkSttlmAmt&gt;                    &lt;OrgnlIntrBkSttlmDt&gt;2023-09-25&lt;/OrgnlIntrBkSttlmDt&gt;                    &lt;RtrdIntrBkSttlmAmt Ccy=&quot;EUR&quot;&gt;181.8&lt;/RtrdIntrBkSttlmAmt&gt;                    &lt;IntrBkSttlmDt&gt;2023-10-10&lt;/IntrBkSttlmDt&gt;                    &lt;RtrdInstdAmt Ccy=&quot;EUR&quot;&gt;196.8&lt;/RtrdInstdAmt&gt;                    &lt;ChrgBr&gt;CRED&lt;/ChrgBr&gt;                    &lt;ChrgsInf&gt;                        &lt;Amt Ccy=&quot;EUR&quot;&gt;15&lt;/Amt&gt;                        &lt;Agt&gt;                            &lt;FinInstnId&gt;                                &lt;BICFI&gt;SPXAIDJAXXX&lt;/BICFI&gt;                            &lt;/FinInstnId&gt;                        &lt;/Agt&gt;                    &lt;/ChrgsInf&gt;                    &lt;InstgAgt&gt;                        &lt;FinInstnId&gt;                            &lt;BICFI&gt;SPXAIDJAXXX&lt;/BICFI&gt;                        &lt;/FinInstnId&gt;                    &lt;/InstgAgt&gt;                    &lt;InstdAgt&gt;                        &lt;FinInstnId&gt;                            &lt;BICFI&gt;PINBIDJAXXX&lt;/BICFI&gt;                        &lt;/FinInstnId&gt;                    &lt;/InstdAgt&gt;                    &lt;RtrChain&gt;                        &lt;Dbtr&gt;                            &lt;Pty&gt;                                &lt;Nm&gt;ANK AZAN&lt;/Nm&gt;                                &lt;PstlAdr&gt;                                    &lt;AdrLine&gt;2/GRAND CITY FORESTVILLE K11 8&lt;/AdrLine&gt;                                    &lt;AdrLine&gt;3/ID/BALIKPAPAN, 76114&lt;/AdrLine&gt;                                &lt;/PstlAdr&gt;                            &lt;/Pty&gt;                        &lt;/Dbtr&gt;                        &lt;DbtrAgt&gt;                            &lt;FinInstnId&gt;                                &lt;BICFI&gt;SPXAIDJAXXX&lt;/BICFI&gt;                            &lt;/FinInstnId&gt;                        &lt;/DbtrAgt&gt;                        &lt;CdtrAgt&gt;                            &lt;FinInstnId&gt;                                &lt;BICFI&gt;SOGEFRPPXXX&lt;/BICFI&gt;                            &lt;/FinInstnId&gt;                        &lt;/CdtrAgt&gt;                        &lt;Cdtr&gt;                            &lt;Pty&gt;                                &lt;Nm&gt;SOCIETE AZAN&lt;/Nm&gt;                                &lt;PstlAdr&gt;                                    &lt;Dept&gt;SDEPT XXXXXX OST COUPONS&lt;/Dept&gt;                                    &lt;StrtNm&gt;32 RUE XXXXXXXXXXX&lt;/StrtNm&gt;                                    &lt;PstCd&gt;XXXX&lt;/PstCd&gt;                                    &lt;TwnNm&gt;NAXXXXXXXXXEX 3&lt;/TwnNm&gt;                                    &lt;Ctry&gt;FR&lt;/Ctry&gt;                                &lt;/PstlAdr&gt;                                &lt;CtryOfRes&gt;FR&lt;/CtryOfRes&gt;                            &lt;/Pty&gt;                        &lt;/Cdtr&gt;                    &lt;/RtrChain&gt;                    &lt;RtrRsnInf&gt;                        &lt;Rsn&gt;                            &lt;Cd&gt;AC01&lt;/Cd&gt;                        &lt;/Rsn&gt;                        &lt;AddtlInf&gt;WE CANCEL YOUR PAYMENT DUE TO INCORRECT ACCOUNT&lt;/AddtlInf&gt;                    &lt;/RtrRsnInf&gt;                &lt;/TxInf&gt;            &lt;/PmtRtr&gt;        &lt;/Document&gt;    &lt;/Saa:Body&gt;&#13;
+&lt;/Saa:DataPDU&gt;&#13;
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;&#13;
+&lt;Saa:DataPDU xmlns:Saa=&quot;urn:swift:saa:xsd:saa.2.0&quot; xmlns:Sw=&quot;urn:swift:snl:ns.Sw&quot; xmlns:SwInt=&quot;urn:swift:snl:ns.SwInt&quot; xmlns:SwGbl=&quot;urn:swift:snl:ns.SwGbl&quot; xmlns:SwSec=&quot;urn:swift:snl:ns.SwSec&quot;&gt;    &lt;Saa:Revision&gt;2.0.13&lt;/Saa:Revision&gt;    &lt;Saa:Header&gt;        &lt;Saa:TransmissionReport&gt;            &lt;Saa:SenderReference&gt;ISPXAIDJAXXXP004.231010211611089&lt;/Saa:SenderReference&gt;            &lt;Saa:ReconciliationInfo&gt;swi00001-2023-10-10T14:25:14.7518.022508Z&lt;/Saa:ReconciliationInfo&gt;            &lt;Saa:NetworkDeliveryStatus&gt;NetworkAcked&lt;/Saa:NetworkDeliveryStatus&gt;            &lt;Saa:OriginalInstanceAddressee&gt;                &lt;Saa:X1&gt;PINBIDJAXXX&lt;/Saa:X1&gt;                &lt;Saa:X2&gt;xxx&lt;/Saa:X2&gt;            &lt;/Saa:OriginalInstanceAddressee&gt;            &lt;Saa:ReportingApplication&gt;SWIFTNetInterface&lt;/Saa:ReportingApplication&gt;            &lt;Saa:NetworkInfo&gt;                &lt;Saa:Priority&gt;Normal&lt;/Saa:Priority&gt;                &lt;Saa:IsPossibleDuplicate&gt;false&lt;/Saa:IsPossibleDuplicate&gt;                &lt;Saa:Service&gt;swift.finplus!pf&lt;/Saa:Service&gt;                &lt;Saa:Network&gt;SWIFTNet&lt;/Saa:Network&gt;                &lt;Saa:SessionNr&gt;000026&lt;/Saa:SessionNr&gt;                &lt;Saa:SeqNr&gt;000000005&lt;/Saa:SeqNr&gt;                &lt;Saa:SWIFTNetNetworkInfo&gt;                    &lt;Saa:RequestType&gt;pacs.004.001.09&lt;/Saa:RequestType&gt;                    &lt;Saa:RequestSubtype&gt;swift.cbprplus.02&lt;/Saa:RequestSubtype&gt;                    &lt;Saa:SWIFTRef&gt;swi00001-2023-10-10T14:25:14.7518.022508Z&lt;/Saa:SWIFTRef&gt;                    &lt;Saa:SNLRef&gt;SNL36646-2023-10-10T14:26:08.13624.000302Z&lt;/Saa:SNLRef&gt;                    &lt;Saa:Reference&gt;83e8c537-86a0-49cc-99b1-5b12874a647c&lt;/Saa:Reference&gt;                    &lt;Saa:SnFInputTime&gt;0301:2023-10-10T14:25:14&lt;/Saa:SnFInputTime&gt;                    &lt;Saa:ResponsePayloadAttributes&gt;                        &lt;Saa:PayloadAttribute&gt;                            &lt;Saa:Name&gt;type&lt;/Saa:Name&gt;                            &lt;Saa:Value&gt;swift.emptyresponse&lt;/Saa:Value&gt;                        &lt;/Saa:PayloadAttribute&gt;                    &lt;/Saa:ResponsePayloadAttributes&gt;                &lt;/Saa:SWIFTNetNetworkInfo&gt;            &lt;/Saa:NetworkInfo&gt;        &lt;/Saa:TransmissionReport&gt;    &lt;/Saa:Header&gt;    &lt;Saa:Body&gt;        &lt;AppHdr xmlns=&quot;urn:iso:std:iso:20022:tech:xsd:head.001.001.02&quot;&gt;            &lt;Fr&gt;                &lt;FIId&gt;                    &lt;FinInstnId&gt;                        &lt;BICFI&gt;SPXAIDJAXXX&lt;/BICFI&gt;                    &lt;/FinInstnId&gt;                &lt;/FIId&gt;            &lt;/Fr&gt;            &lt;To&gt;                &lt;FIId&gt;                    &lt;FinInstnId&gt;                        &lt;BICFI&gt;PINBIDJAXXX&lt;/BICFI&gt;                    &lt;/FinInstnId&gt;                &lt;/FIId&gt;            &lt;/To&gt;            &lt;BizMsgIdr&gt;RTR231010SPXA098&lt;/BizMsgIdr&gt;            &lt;MsgDefIdr&gt;pacs.004.001.09&lt;/MsgDefIdr&gt;            &lt;BizSvc&gt;swift.cbprplus.02&lt;/BizSvc&gt;            &lt;CreDt&gt;2023-10-10T21:13:53+07:00&lt;/CreDt&gt;            &lt;Rltd&gt;                &lt;Fr&gt;                    &lt;FIId&gt;                        &lt;FinInstnId&gt;                            &lt;BICFI&gt;PINBIDJAXXX&lt;/BICFI&gt;                        &lt;/FinInstnId&gt;                    &lt;/FIId&gt;                &lt;/Fr&gt;                &lt;To&gt;                    &lt;FIId&gt;                        &lt;FinInstnId&gt;                            &lt;BICFI&gt;SPXAIDJAXXX&lt;/BICFI&gt;                        &lt;/FinInstnId&gt;                    &lt;/FIId&gt;                &lt;/To&gt;                &lt;BizMsgIdr&gt;03TG23070493739A&lt;/BizMsgIdr&gt;                &lt;MsgDefIdr&gt;pacs.008.001.08&lt;/MsgDefIdr&gt;                &lt;BizSvc&gt;swift.cbprplus.02&lt;/BizSvc&gt;                &lt;CreDt&gt;2023-09-25T05:49:17+00:00&lt;/CreDt&gt;            &lt;/Rltd&gt;        &lt;/AppHdr&gt;        &lt;Document xmlns=&quot;urn:iso:std:iso:20022:tech:xsd:pacs.004.001.09&quot;&gt;            &lt;PmtRtr&gt;                &lt;GrpHdr&gt;                    &lt;MsgId&gt;RTR231010SPXA098&lt;/MsgId&gt;                    &lt;CreDtTm&gt;2023-10-10T21:13:53+07:00&lt;/CreDtTm&gt;                    &lt;NbOfTxs&gt;1&lt;/NbOfTxs&gt;                    &lt;SttlmInf&gt;                        &lt;SttlmMtd&gt;INGA&lt;/SttlmMtd&gt;                    &lt;/SttlmInf&gt;                &lt;/GrpHdr&gt;                &lt;TxInf&gt;                    &lt;RtrId&gt;RTR231010SPXA098&lt;/RtrId&gt;                    &lt;OrgnlGrpInf&gt;                        &lt;OrgnlMsgId&gt;03TG23070493739A&lt;/OrgnlMsgId&gt;                        &lt;OrgnlMsgNmId&gt;pacs.008.001.08&lt;/OrgnlMsgNmId&gt;                        &lt;OrgnlCreDtTm&gt;2023-09-25T05:49:17+00:00&lt;/OrgnlCreDtTm&gt;                    &lt;/OrgnlGrpInf&gt;                    &lt;OrgnlInstrId&gt;03TG23070493739A&lt;/OrgnlInstrId&gt;                    &lt;OrgnlEndToEndId&gt;9729051&lt;/OrgnlEndToEndId&gt;                    &lt;OrgnlTxId&gt;230704009462&lt;/OrgnlTxId&gt;                    &lt;OrgnlUETR&gt;6efd833d-e997-459d-82fa-7b4ad764171e&lt;/OrgnlUETR&gt;                    &lt;OrgnlIntrBkSttlmAmt Ccy=&quot;EUR&quot;&gt;196.8&lt;/OrgnlIntrBkSttlmAmt&gt;                    &lt;OrgnlIntrBkSttlmDt&gt;2023-09-25&lt;/OrgnlIntrBkSttlmDt&gt;                    &lt;RtrdIntrBkSttlmAmt Ccy=&quot;EUR&quot;&gt;181.8&lt;/RtrdIntrBkSttlmAmt&gt;                    &lt;IntrBkSttlmDt&gt;2023-10-10&lt;/IntrBkSttlmDt&gt;                    &lt;RtrdInstdAmt Ccy=&quot;EUR&quot;&gt;196.8&lt;/RtrdInstdAmt&gt;                    &lt;ChrgBr&gt;CRED&lt;/ChrgBr&gt;                    &lt;ChrgsInf&gt;                        &lt;Amt Ccy=&quot;EUR&quot;&gt;15&lt;/Amt&gt;                        &lt;Agt&gt;                            &lt;FinInstnId&gt;                                &lt;BICFI&gt;SPXAIDJAXXX&lt;/BICFI&gt;                            &lt;/FinInstnId&gt;                        &lt;/Agt&gt;                    &lt;/ChrgsInf&gt;                    &lt;InstgAgt&gt;                        &lt;FinInstnId&gt;                            &lt;BICFI&gt;SPXAIDJAXXX&lt;/BICFI&gt;                        &lt;/FinInstnId&gt;                    &lt;/InstgAgt&gt;                    &lt;InstdAgt&gt;                        &lt;FinInstnId&gt;                            &lt;BICFI&gt;PINBIDJAXXX&lt;/BICFI&gt;                        &lt;/FinInstnId&gt;                    &lt;/InstdAgt&gt;                    &lt;RtrChain&gt;                        &lt;Dbtr&gt;                            &lt;Pty&gt;                                &lt;Nm&gt;ANK AZAN&lt;/Nm&gt;                                &lt;PstlAdr&gt;                                    &lt;AdrLine&gt;2/GRAND CITY FORESTVILLE K11 8&lt;/AdrLine&gt;                                    &lt;AdrLine&gt;3/ID/BALIKPAPAN, 76114&lt;/AdrLine&gt;                                &lt;/PstlAdr&gt;                            &lt;/Pty&gt;                        &lt;/Dbtr&gt;                        &lt;DbtrAgt&gt;                            &lt;FinInstnId&gt;                                &lt;BICFI&gt;SPXAIDJAXXX&lt;/BICFI&gt;                            &lt;/FinInstnId&gt;                        &lt;/DbtrAgt&gt;                        &lt;CdtrAgt&gt;                            &lt;FinInstnId&gt;                                &lt;BICFI&gt;SOGEFRPPXXX&lt;/BICFI&gt;                            &lt;/FinInstnId&gt;                        &lt;/CdtrAgt&gt;                        &lt;Cdtr&gt;                            &lt;Pty&gt;                                &lt;Nm&gt;SOCIETE AZAN&lt;/Nm&gt;                                &lt;PstlAdr&gt;                                    &lt;Dept&gt;SDEPT XXXXXX OST COUPONS&lt;/Dept&gt;                                    &lt;StrtNm&gt;32 RUE XXXXXXXXXXX&lt;/StrtNm&gt;                                    &lt;PstCd&gt;XXXX&lt;/PstCd&gt;                                    &lt;TwnNm&gt;NAXXXXXXXXXEX 3&lt;/TwnNm&gt;                                    &lt;Ctry&gt;FR&lt;/Ctry&gt;                                &lt;/PstlAdr&gt;                                &lt;CtryOfRes&gt;FR&lt;/CtryOfRes&gt;                            &lt;/Pty&gt;                        &lt;/Cdtr&gt;                    &lt;/RtrChain&gt;                    &lt;RtrRsnInf&gt;                        &lt;Rsn&gt;                            &lt;Cd&gt;AC01&lt;/Cd&gt;                        &lt;/Rsn&gt;                        &lt;AddtlInf&gt;WE CANCEL YOUR PAYMENT DUE TO INCORRECT ACCOUNT&lt;/AddtlInf&gt;                    &lt;/RtrRsnInf&gt;                &lt;/TxInf&gt;            &lt;/PmtRtr&gt;        &lt;/Document&gt;    &lt;/Saa:Body&gt;&#13;
+&lt;/Saa:DataPDU&gt;</string> 
+  </void> 
+  <void property="elementsToEncrypt"> 
+   <object class="com.fiorano.services.common.configuration.EncryptDecryptElements"/> 
+  </void> 
+  <void property="errorHandlingConfiguration"> 
+   <void property="errorActionsMap"> 
+    <void method="get"> 
+     <object class="com.fiorano.edbc.framework.service.exception.ServiceErrorID" method="getServiceErrorId"> 
+      <int>3</int> 
+     </object> 
+     <void method="clear"/> 
+     <void method="add"> 
+      <object class="com.fiorano.edbc.framework.service.exception.ErrorHandlingAction"/> 
+     </void> 
+     <void method="add"> 
+      <object class="com.fiorano.edbc.framework.service.exception.ErrorHandlingAction"> 
+       <void property="id"> 
+        <int>5</int> 
+       </void> 
+      </object> 
+     </void> 
+    </void> 
+    <void method="get"> 
+     <object class="com.fiorano.edbc.framework.service.exception.ServiceErrorID" method="getServiceErrorId"> 
+      <int>2</int> 
+     </object> 
+     <void method="clear"/> 
+     <void method="add"> 
+      <object class="com.fiorano.edbc.framework.service.exception.ErrorHandlingAction"/> 
+     </void> 
+     <void method="add"> 
+      <object class="com.fiorano.edbc.framework.service.exception.ErrorHandlingAction"> 
+       <void property="id"> 
+        <int>1</int> 
+       </void> 
+      </object> 
+     </void> 
+    </void> 
+    <void method="get"> 
+     <object class="com.fiorano.edbc.framework.service.exception.ServiceErrorID" method="getServiceErrorId"> 
+      <int>1</int> 
+     </object> 
+     <void method="clear"/> 
+     <void method="add"> 
+      <object class="com.fiorano.edbc.framework.service.exception.ErrorHandlingAction"/> 
+     </void> 
+     <void method="add"> 
+      <object class="com.fiorano.edbc.framework.service.exception.RetryAction"> 
+       <void property="configuration"> 
+        <object class="com.fiorano.edbc.framework.service.exception.RetryConfiguration"> 
+         <void property="otherActions"> 
+          <void method="put"> 
+           <object class="com.fiorano.edbc.framework.service.exception.ErrorHandlingAction"> 
+            <void property="id"> 
+             <int>1</int> 
+            </void> 
+           </object> 
+           <int>1</int> 
+          </void> 
+          <void method="put"> 
+           <object class="com.fiorano.edbc.framework.service.exception.ErrorHandlingAction"/> 
+           <int>1</int> 
+          </void> 
+         </void> 
+        </object> 
+       </void> 
+       <void property="id"> 
+        <int>2</int> 
+       </void> 
+      </object> 
+     </void> 
+     <void method="add"> 
+      <object class="com.fiorano.edbc.framework.service.exception.ErrorHandlingAction"> 
+       <void property="id"> 
+        <int>1</int> 
+       </void> 
+      </object> 
+     </void> 
+     <void method="add"> 
+      <object class="com.fiorano.edbc.framework.service.exception.ErrorHandlingAction"> 
+       <void property="id"> 
+        <int>5</int> 
+       </void> 
+      </object> 
+     </void> 
+     <void method="add"> 
+      <object class="com.fiorano.edbc.framework.service.exception.ErrorHandlingAction"> 
+       <void property="id"> 
+        <int>4</int> 
+       </void> 
+      </object> 
+     </void> 
+    </void> 
+    <void method="get"> 
+     <object class="com.fiorano.edbc.framework.service.exception.ServiceErrorID" method="getServiceErrorId"> 
+      <int>0</int> 
+     </object> 
+     <void method="clear"/> 
+     <void method="add"> 
+      <object class="com.fiorano.edbc.framework.service.exception.ErrorHandlingAction"/> 
+     </void> 
+     <void method="add"> 
+      <object class="com.fiorano.edbc.framework.service.exception.ErrorHandlingAction"> 
+       <void property="id"> 
+        <int>6</int> 
+       </void> 
+      </object> 
+     </void> 
+     <void method="add"> 
+      <object class="com.fiorano.edbc.framework.service.exception.ErrorHandlingAction"> 
+       <void property="id"> 
+        <int>1</int> 
+       </void> 
+      </object> 
+     </void> 
+     <void method="add"> 
+      <object class="com.fiorano.edbc.framework.service.exception.ErrorHandlingAction"> 
+       <void property="id"> 
+        <int>5</int> 
+       </void> 
+      </object> 
+     </void> 
+    </void> 
+   </void> 
+  </void> 
+  <void property="header"> 
+   <object class="java.util.LinkedHashMap"/> 
+  </void> 
+  <void property="messageFormat"> 
+   <int>0</int> 
+  </void> 
+ </object> 
+</java> 
